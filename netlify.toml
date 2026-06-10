@@ -1,0 +1,3 @@
+[build]
+  base    = "fitroom-github-1"
+  publish = "fitroom-github-1"
