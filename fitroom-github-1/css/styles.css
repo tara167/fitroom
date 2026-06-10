@@ -70,7 +70,7 @@ p{ margin:0 0 1em; }
 
 /* ---- buttons ---- */
 .btn{
-  --bg:var(--ink); --fg:var(--paper);
+  --bg:#1a4d2e; --fg:var(--paper);
   display:inline-flex; align-items:center; justify-content:center; gap:.6em;
   font-family:var(--m); font-weight:400; font-size:.74rem; letter-spacing:.08em; text-transform:uppercase;
   padding:1.05em 1.9em; background:var(--bg); color:var(--fg);
