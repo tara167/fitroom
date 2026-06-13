@@ -6,8 +6,8 @@
 const CONFIG = {
   // WhatsApp in full international format, digits only (no +, spaces or dashes).
   // Confirmed from the Santa Teresa flyer: "Reservation required at +506 7253-2299".
-  whatsappNumber: "50672532299",            // +506 7253 2299
-  whatsappDisplay: "+506 7253 2299",
+  whatsappNumber: "50670546982",            // +506 7054 6982
+  whatsappDisplay: "+506 7054 6982",
   whatsappMessage: "Hi Fit Room! I'd love to book a class 🌿",
   instagram: "https://www.instagram.com/fitroom_santateresa",
 };
