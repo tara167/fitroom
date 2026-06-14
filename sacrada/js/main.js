@@ -2,7 +2,13 @@
    SACRADA · main.js
    ========================================================= */
 const CONFIG = {
-  calendlyUrl: "https://calendly.com/vitalbreathcoach",
+  bookingUrl: "",            // empty until client sets up Calendly event
+  email: "",
+  instagramUrl: "",
+  sessionLength: "60–75 minutes",
+  onlinePlatform: "a private video call",
+  inPersonLocation: "",
+  cancellation: "you can reschedule with at least 24 hours' notice",
 };
 
 /* ── Scroll progress ── */
@@ -26,10 +32,40 @@ setTimeout(() => {
   document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
 }, 1000);
 
-/* ── Calendly links ── */
+/* ── Book buttons ── */
+if (!CONFIG.bookingUrl) {
+  console.warn('[Sacrada] CONFIG.bookingUrl is empty. Book buttons are disabled until a Calendly URL is set.');
+}
+
 document.querySelectorAll('.js-book').forEach(el => {
-  el.addEventListener('click', e => {
-    e.preventDefault();
-    window.open(CONFIG.calendlyUrl, '_blank');
+  if (CONFIG.bookingUrl) {
+    el.setAttribute('href', CONFIG.bookingUrl);
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener noreferrer');
+  } else {
+    // bookingUrl not set — disable buttons visually
+    el.setAttribute('href', '#');
+    el.setAttribute('aria-disabled', 'true');
+    el.classList.add('btn--disabled');
+    el.addEventListener('click', e => e.preventDefault());
+  }
+});
+
+/* ── FAQ accordion ── */
+document.querySelectorAll('.faq__item').forEach(item => {
+  const btn = item.querySelector('.faq__question');
+  const answer = item.querySelector('.faq__answer');
+  if (!btn || !answer) return;
+
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    // Close all others
+    document.querySelectorAll('.faq__item').forEach(other => {
+      other.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+      other.querySelector('.faq__answer').hidden = true;
+    });
+    // Toggle this one
+    btn.setAttribute('aria-expanded', String(!expanded));
+    answer.hidden = expanded;
   });
 });

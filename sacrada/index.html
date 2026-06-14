@@ -6,15 +6,42 @@
   <title>Sacrada · Sacred space for truth to breathe</title>
   <meta name="description" content="A sacred, breath-guided journey where truth surfaces. Intuitive mediumship, breathwork and somatic coaching — held with deep care for your nervous system and your soul." />
 
+  <link rel="canonical" href="https://sacrada.space/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#1a1422" />
+
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Sacrada · Sacred space for truth to breathe" />
   <meta property="og:description" content="Where breath meets truth. Book The Sacrada Session." />
+  <meta property="og:url" content="https://sacrada.space/" />
+  <meta property="og:image" content="https://sacrada.space/assets/img/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sacrada — Sacred space for truth to breathe" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sacrada · Sacred space for truth to breathe" />
+  <meta name="twitter:description" content="Where breath meets truth. Book The Sacrada Session." />
+  <meta name="twitter:image" content="https://sacrada.space/assets/img/og-image.svg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "The Sacrada Session",
+    "serviceType": "Breathwork, intuitive mediumship & somatic coaching",
+    "description": "A sacred, breath-guided session where truth surfaces — intuitive mediumship and somatic awareness, held with deep care for your nervous system.",
+    "provider": { "@type": "Organization", "name": "Sacrada", "url": "https://sacrada.space/" },
+    "areaServed": "Online and in person",
+    "offers": { "@type": "Offer", "price": "111", "priceCurrency": "USD", "url": "https://sacrada.space/" }
+  }
+  </script>
 </head>
 <body>
 
@@ -61,9 +88,44 @@
           <p>My gift is seeing you — not just who you are today, but who you are becoming. Each session brings clarity, deepens your intuition and gives you the guidance you already carry within.</p>
           <p>This is not a performance. This is sacred space — held with care, rooted in truth, and breathed into life.</p>
         </div>
-        <div class="about__visual reveal">
+        <div class="about__visual reveal" aria-hidden="true">
           <div class="about__frame"></div>
-          <img class="about__img" src="assets/img/sacrada-portrait.jpg" alt="Sacrada — sacred space for truth to breathe" />
+          <div class="about__motif">
+            <svg class="about__motif-svg" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="motif-bg" cx="50%" cy="50%" r="70%">
+                  <stop offset="0%" stop-color="#2a2238"/>
+                  <stop offset="100%" stop-color="#0e0c12"/>
+                </radialGradient>
+                <radialGradient id="moon-glow" cx="45%" cy="48%" r="55%">
+                  <stop offset="0%" stop-color="#c9a96e" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <!-- Background -->
+              <rect width="400" height="500" fill="url(#motif-bg)"/>
+              <!-- Ambient glow -->
+              <ellipse cx="200" cy="240" rx="180" ry="180" fill="url(#moon-glow)" class="motif-glow"/>
+              <!-- Seed of life: outer circle -->
+              <circle cx="200" cy="240" r="130" fill="none" stroke="#c9a96e" stroke-opacity="0.12" stroke-width="0.8"/>
+              <!-- Seed of life petal circles (6 + center) -->
+              <circle cx="200" cy="240" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
+              <circle cx="265" cy="240" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
+              <circle cx="232" cy="184" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
+              <circle cx="168" cy="184" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
+              <circle cx="135" cy="240" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
+              <circle cx="168" cy="296" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
+              <circle cx="232" cy="296" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
+              <!-- Outer containing ring -->
+              <circle cx="200" cy="240" r="155" fill="none" stroke="#c9a96e" stroke-opacity="0.08" stroke-width="0.6"/>
+              <!-- Crescent moon -->
+              <circle cx="200" cy="210" r="68" fill="#c9a96e" class="motif-moon"/>
+              <circle cx="228" cy="196" r="57" fill="#0e0c12"/>
+              <!-- Small star accent -->
+              <text x="148" y="345" font-size="12" fill="#c9a96e" opacity="0.4" text-anchor="middle">✦</text>
+              <text x="252" y="152" font-size="8" fill="#c9a96e" opacity="0.3" text-anchor="middle">✦</text>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
@@ -86,6 +148,38 @@
             <span class="pillar__num">03</span>
             <h3>Somatic &amp; Trauma-Informed</h3>
             <p>Every session is held with deep care for your nervous system. You are always safe here. Always seen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT TO EXPECT ============ -->
+    <section class="expect section" id="expect">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="label mono"><span>The journey</span></p>
+          <h2>What to expect</h2>
+        </header>
+        <div class="pillars__grid pillars__grid--four">
+          <div class="pillar reveal">
+            <span class="pillar__num">01</span>
+            <h3>Reserve your space</h3>
+            <p>Choose a time that works for you and book in a few clicks.</p>
+          </div>
+          <div class="pillar reveal">
+            <span class="pillar__num">02</span>
+            <h3>We connect</h3>
+            <p>Online from anywhere, or in person. You'll receive everything you need after booking.</p>
+          </div>
+          <div class="pillar reveal">
+            <span class="pillar__num">03</span>
+            <h3>Breathe &amp; receive</h3>
+            <p>A breath-guided opening, then an intuitive reading — held in safe, sacred space.</p>
+          </div>
+          <div class="pillar reveal">
+            <span class="pillar__num">04</span>
+            <h3>Integrate</h3>
+            <p>Space for your questions, so the clarity stays with you long after we close.</p>
           </div>
         </div>
       </div>
@@ -115,6 +209,99 @@
       </div>
     </section>
 
+    <!-- ============ FAQ ============ -->
+    <section class="faq section" id="faq">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="label mono"><span>Questions</span></p>
+          <h2>Frequently asked</h2>
+        </header>
+        <div class="faq__list">
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              What actually happens in a Sacrada Session?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>We begin with a breath-guided opening — a gentle, conscious breathwork practice that settles your nervous system and opens you to receive. From there, I connect intuitively to your highest self: the clearest, wisest version of you. Messages, images and knowing arise naturally. Somatic awareness is woven throughout, so your body is always honoured. We close with dedicated space for your questions and integration.</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              How long is a session?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>Sessions run for <strong>60–75 minutes</strong>. Please allow a little buffer afterwards — it's worth giving yourself time to settle before stepping back into your day.</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              Do you offer online sessions?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>Yes. Sessions are offered online via <strong>a private video call</strong>, so you can join from wherever you are in the world. All you need is a quiet, comfortable space where you won't be disturbed, a reliable internet connection, and a pair of headphones if possible.</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              I've never done breathwork — is it safe?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>Yes. The breathwork I use is gentle, intentional and trauma-informed. You are always in the driver's seat — you set the pace, and we go only as deep as feels right for you. If at any point something doesn't feel good, we adapt. Your safety and comfort come first, always.</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              How is this different from a psychic reading?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>Traditional readings often focus on the past or on predicting future events. A Sacrada Session is different: I connect you to your <em>highest self</em> — the part of you that already holds the clarity and wisdom you're seeking. The guidance that comes through is empowering, not prescriptive. You leave with more access to your own knowing, not more dependency on someone else's.</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              What do I need to prepare?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>Come as you are. No preparation is needed. Wear something comfortable, have a glass of water nearby, and find a quiet space where you won't be interrupted. If there's something specific you'd like to explore, you're welcome to hold that intention — but there's no homework required.</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              How do I pay?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>The session investment is <strong>$111</strong>. Payment is confirmed at the time of booking — you'll be guided through this when you reserve your space.</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              What if I need to reschedule?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>Life happens. You can reschedule with at least <strong>24 hours' notice</strong> with no problem at all. Please reach out as soon as you know — this allows your space to be offered to someone on the waitlist.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CTA ============ -->
     <section class="cta-banner section">
       <div class="container cta-banner__inner reveal">
@@ -128,8 +315,18 @@
 
   <!-- ============ FOOTER ============ -->
   <footer>
-    <div class="container">
-      <p class="mono">© 2025 Sacrada · Sacred space for truth to breathe</p>
+    <div class="container footer__inner">
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#session">The Session</a>
+        <a href="#expect">What to expect</a>
+        <a href="#faq">FAQ</a>
+        <a href="#" class="js-book">Book</a>
+      </nav>
+      <p class="mono footer__copy">© 2026 Sacrada · Sacred space for truth to breathe</p>
+      <div class="footer__legal">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
     </div>
   </footer>
 
