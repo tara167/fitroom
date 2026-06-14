@@ -303,6 +303,11 @@ footer .mono { color: rgba(245,240,232,.3); font-size: .65rem; }
 }
 .reveal.visible { opacity: 1; transform: none; }
 
+/* Fallback: show everything if JS didn't fire */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .about__grid,

@@ -18,8 +18,13 @@ window.addEventListener('scroll', () => {
 /* ── Reveal on scroll ── */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.12 });
+}, { threshold: 0.05 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Fallback: show all reveals after 1s in case observer doesn't fire
+setTimeout(() => {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+}, 1000);
 
 /* ── Calendly links ── */
 document.querySelectorAll('.js-book').forEach(el => {
