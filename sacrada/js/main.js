@@ -5,6 +5,7 @@ const CONFIG = {
   bookingUrl: "https://calendly.com/vitalbreathcoach/sacrada-session",
   email: "",
   instagramUrl: "https://www.instagram.com/sacrada.space",
+  tiktokUrl: "https://www.tiktok.com/@sacrada.space",
   sessionLength: "60–75 minutes",
   onlinePlatform: "a private video call",
   inPersonLocation: "",
