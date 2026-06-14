@@ -114,7 +114,7 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
 }
 .hero__tagline {
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: var(--cream); opacity: .75;
+  color: var(--cream); opacity: .8;
   margin-bottom: 3rem;
   font-style: italic;
 }
@@ -224,7 +224,7 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
 }
 .session__per {
   font-family: var(--font-mono); font-size: .7rem;
-  letter-spacing: .15em; color: var(--cream); opacity: .4;
+  letter-spacing: .15em; color: var(--cream); opacity: .6;
   text-transform: uppercase; margin-bottom: 3rem;
 }
 .session__list {
@@ -252,6 +252,9 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
   margin-top: 4rem;
+}
+.pillars__grid--four {
+  grid-template-columns: repeat(4, 1fr);
 }
 .pillar {
   background: var(--deep);
@@ -297,22 +300,162 @@ footer {
 footer .mono { color: rgba(245,240,232,.3); font-size: .65rem; }
 
 /* ── Reveal animation ── */
-.reveal {
-  opacity: 0; transform: translateY(28px);
-  transition: opacity .8s var(--ease), transform .8s var(--ease);
-}
-.reveal.visible { opacity: 1; transform: none; }
+.reveal { opacity: 1; transform: none; }
 
-/* Fallback: show everything if JS didn't fire */
-@media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity .8s var(--ease), transform .8s var(--ease);
+  }
+  .reveal.visible { opacity: 1; transform: none; }
 }
+
+/* ── About motif (CSS/SVG visual) ── */
+.about__motif {
+  width: 100%;
+  aspect-ratio: 4/5;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.about__motif-svg {
+  width: 100%; height: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .motif-glow {
+    animation: motifGlow 6s ease-in-out infinite alternate;
+  }
+  .motif-moon {
+    animation: motifFloat 8s ease-in-out infinite;
+  }
+}
+
+@keyframes motifGlow {
+  from { opacity: 0.6; }
+  to   { opacity: 1; }
+}
+
+@keyframes motifFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+/* ── What to Expect section ── */
+.expect .section-head { margin-bottom: 0; }
+.section-head { margin-bottom: 1rem; }
+.section-head h2 { margin-top: .75rem; }
+.label.mono span { display: inline-block; }
+
+/* ── FAQ ── */
+.faq__list {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.faq__item {
+  border-bottom: 1px solid rgba(201,169,110,.15);
+}
+.faq__question {
+  width: 100%;
+  background: none; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.6rem 0;
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-weight: 300;
+  color: var(--cream);
+  text-align: left;
+  gap: 1rem;
+}
+.faq__icon {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  position: relative;
+  color: var(--gold);
+}
+.faq__icon::before,
+.faq__icon::after {
+  content: '';
+  position: absolute;
+  background: var(--gold);
+  border-radius: 1px;
+}
+.faq__icon::before { width: 12px; height: 1px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+.faq__icon::after  { width: 1px; height: 12px; top: 50%; left: 50%; transform: translate(-50%,-50%); transition: transform .3s var(--ease), opacity .3s; }
+.faq__question[aria-expanded="true"] .faq__icon::after { transform: translate(-50%,-50%) rotate(90deg); opacity: 0; }
+.faq__answer {
+  padding-bottom: 1.6rem;
+}
+.faq__answer[hidden] { display: none; }
+.faq__answer p {
+  color: rgba(245,240,232,.7);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+.faq__answer strong { color: var(--gold-lt); font-weight: 400; }
+.faq__answer em { color: var(--cream); }
+
+/* ── Disabled book button ── */
+.btn--disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Focus visible ── */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* ── Footer layout ── */
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer__nav {
+  display: flex; flex-wrap: wrap;
+  gap: .5rem 2rem;
+  justify-content: center;
+}
+.footer__nav a {
+  font-family: var(--font-mono); font-size: .65rem;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: rgba(245,240,232,.45); text-decoration: none;
+  transition: color .2s;
+}
+.footer__nav a:hover { color: var(--gold); }
+.footer__copy { margin: 0; }
+.footer__legal {
+  display: flex; gap: 1.5rem;
+}
+.footer__legal a {
+  font-family: var(--font-mono); font-size: .6rem;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(245,240,232,.25); text-decoration: none;
+  transition: color .2s;
+}
+.footer__legal a:hover { color: var(--gold); }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .about__grid,
   .session__inner { grid-template-columns: 1fr; }
-  .pillars__grid { grid-template-columns: 1fr; gap: 2px; }
+  .pillars__grid,
+  .pillars__grid--four { grid-template-columns: 1fr; gap: 2px; }
   .moon { display: none; }
   .about__visual { order: -1; }
+}
+
+/* ── No horizontal overflow ── */
+@media (max-width: 390px) {
+  body { overflow-x: hidden; }
+  .container { width: 94vw; }
+  .btn { padding: .8rem 1.4rem; font-size: .65rem; }
+  .hero__cta { flex-direction: column; }
 }
