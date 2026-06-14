@@ -63,9 +63,13 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
   display: flex; align-items: center; justify-content: space-between;
 }
 .logo {
-  font-family: var(--font-mono); font-size: .85rem;
-  letter-spacing: .25em; text-transform: uppercase;
-  color: var(--gold); text-decoration: none;
+  text-decoration: none;
+  display: flex; align-items: center;
+}
+.logo__img {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 .header__cta {
   font-family: var(--font-mono); font-size: .7rem;
