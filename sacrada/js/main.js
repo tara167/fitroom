@@ -33,24 +33,6 @@ setTimeout(() => {
   document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
 }, 1000);
 
-/* ── Book buttons ── */
-if (!CONFIG.bookingUrl) {
-  console.warn('[Sacrada] CONFIG.bookingUrl is empty. Book buttons are disabled until a Calendly URL is set.');
-}
-
-document.querySelectorAll('.js-book').forEach(el => {
-  if (CONFIG.bookingUrl) {
-    el.setAttribute('href', CONFIG.bookingUrl);
-    el.setAttribute('target', '_blank');
-    el.setAttribute('rel', 'noopener noreferrer');
-  } else {
-    // bookingUrl not set — disable buttons visually
-    el.setAttribute('href', '#');
-    el.setAttribute('aria-disabled', 'true');
-    el.classList.add('btn--disabled');
-    el.addEventListener('click', e => e.preventDefault());
-  }
-});
 
 /* ── FAQ accordion ── */
 document.querySelectorAll('.faq__item').forEach(item => {
