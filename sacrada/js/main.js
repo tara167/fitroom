@@ -2,7 +2,7 @@
    SACRADA · main.js
    ========================================================= */
 const CONFIG = {
-  bookingUrl: "",            // empty until client sets up Calendly event
+  bookingUrl: "https://calendly.com/vitalbreathcoach/sacrada-session",
   email: "",
   instagramUrl: "",
   sessionLength: "60–75 minutes",
