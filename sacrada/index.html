@@ -399,6 +399,40 @@
     </div>
   </footer>
 
-  <script src="js/sacrada.js"></script>
+  <script>
+/* ── Scroll progress ── */
+const scrollBar = document.getElementById('scrollBar');
+window.addEventListener('scroll', () => {
+  const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+  if (scrollBar) scrollBar.style.width = pct + '%';
+  const header = document.getElementById('header');
+  if (header) header.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+/* ── Reveal on scroll ── */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.05 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+setTimeout(() => {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+}, 1000);
+
+/* ── FAQ accordion ── */
+document.querySelectorAll('.faq__item').forEach(item => {
+  const btn = item.querySelector('.faq__question');
+  const answer = item.querySelector('.faq__answer');
+  if (!btn || !answer) return;
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq__item').forEach(other => {
+      other.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+      other.querySelector('.faq__answer').hidden = true;
+    });
+    btn.setAttribute('aria-expanded', String(!expanded));
+    answer.hidden = expanded;
+  });
+});
+  </script>
 </body>
 </html>
