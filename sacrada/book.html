@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book The Sacrada Session · Sacrada</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#1a1422" />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .book-page {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 5vw 80px;
+    }
+    .book-card {
+      max-width: 680px;
+      width: 100%;
+      background: rgba(42, 34, 56, 0.45);
+      border: 1px solid rgba(201, 169, 110, 0.15);
+      border-radius: 4px;
+      padding: clamp(2rem, 6vw, 4rem);
+    }
+    .book-card .section-label {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+    .book-card h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+      color: var(--cream);
+    }
+    .book-price {
+      font-family: 'Space Mono', monospace;
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 2.5rem;
+      display: block;
+    }
+    .waiver {
+      background: rgba(14, 12, 18, 0.6);
+      border: 1px solid rgba(201, 169, 110, 0.1);
+      border-radius: 4px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+    }
+    .waiver h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      color: var(--gold);
+      opacity: 0.7;
+      margin-bottom: 1.2rem;
+    }
+    .waiver p, .waiver li {
+      font-size: 0.9rem;
+      color: var(--cream);
+      opacity: 0.65;
+      line-height: 1.7;
+      margin-bottom: 0.6rem;
+    }
+    .waiver ul {
+      padding-left: 1.2rem;
+      margin-bottom: 0;
+    }
+    .waiver li {
+      margin-bottom: 0.4rem;
+    }
+    .agree-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+    .agree-row input[type="checkbox"] {
+      margin-top: 3px;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--gold);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .agree-row label {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      color: var(--cream);
+      opacity: 0.8;
+      cursor: pointer;
+      line-height: 1.5;
+    }
+    .btn--disabled-state {
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    .book-steps {
+      margin-bottom: 2.5rem;
+    }
+    .book-steps p {
+      font-size: 0.9rem;
+      color: var(--cream);
+      opacity: 0.55;
+      margin-bottom: 0.4rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 1px;
+    }
+    .divider-line {
+      border: none;
+      border-top: 1px solid rgba(201,169,110,0.12);
+      margin: 2rem 0;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      color: var(--gold);
+      opacity: 0.45;
+      text-decoration: none;
+    }
+    .back-link:hover { opacity: 0.7; }
+  </style>
+</head>
+<body>
+
+  <div class="stars" aria-hidden="true"></div>
+
+  <header class="site-header scrolled" id="header">
+    <div class="container header__inner">
+      <a href="/" class="logo" aria-label="Sacrada home">
+        <img src="assets/img/sacrada-logo.svg" alt="Sacrada" class="logo__img" />
+      </a>
+    </div>
+  </header>
+
+  <main class="book-page">
+    <div class="book-card">
+
+      <span class="section-label mono gold">The offering</span>
+      <h1>The Sacrada Session</h1>
+      <span class="book-price">$111</span>
+
+      <div class="book-steps">
+        <p>STEP 1 — READ &amp; AGREE BELOW</p>
+        <p>STEP 2 — SEND PAYMENT VIA PAYPAL</p>
+        <p>STEP 3 — BOOK YOUR TIME ON CALENDLY</p>
+      </div>
+
+      <div class="waiver">
+        <h2>DISCLAIMER &amp; AGREEMENT</h2>
+        <p>Please read the following before proceeding:</p>
+        <ul>
+          <li>Sacrada sessions are offered for spiritual guidance, personal reflection, and energetic support only.</li>
+          <li>Sessions are not a substitute for medical, psychological, legal, or financial advice. If you are in crisis, please seek qualified professional help.</li>
+          <li>Sacrada does not diagnose, treat, or cure any condition. No specific outcomes are guaranteed.</li>
+          <li>All information shared during your session is held in strict confidence.</li>
+          <li>You must be 18 years of age or older to book a session.</li>
+          <li>Payment is non-refundable once the session has been delivered. Rescheduling is available with at least 24 hours' notice.</li>
+          <li>By proceeding, you confirm that you are entering this session of your own free will and take full personal responsibility for how you receive and act on any guidance.</li>
+        </ul>
+      </div>
+
+      <div class="agree-row">
+        <input type="checkbox" id="agreeCheck" />
+        <label for="agreeCheck">I have read and agree to the above disclaimer. I am 18 or older and enter this session freely and of my own accord.</label>
+      </div>
+
+      <hr class="divider-line" />
+
+      <div id="payBtn" class="btn--disabled-state">
+        <a href="https://paypal.me/TaraTobin346/111" class="btn btn--gold" style="display:block; text-align:center; margin-bottom:1rem;">
+          Send Payment — $111 via PayPal
+        </a>
+        <a href="https://calendly.com/vitalbreathcoach/sacrada-session" class="btn btn--outline" style="display:block; text-align:center;">
+          Book Your Time on Calendly
+        </a>
+      </div>
+
+      <a href="/#session" class="back-link">← Back to sacrada.space</a>
+
+    </div>
+  </main>
+
+  <script>
+    const checkbox = document.getElementById('agreeCheck');
+    const payBtn = document.getElementById('payBtn');
+    checkbox.addEventListener('change', () => {
+      payBtn.classList.toggle('btn--disabled-state', !checkbox.checked);
+    });
+  </script>
+
+</body>
+</html>
