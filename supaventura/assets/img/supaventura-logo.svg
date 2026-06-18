@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" width="320" height="120">
+  <!-- SUP Aventura logo — line art style matching original -->
+  <defs>
+    <style>
+      .logo-mark { fill: none; stroke: #3d2b1f; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .logo-sun { fill: #e8804a; }
+      .logo-text { font-family: 'DM Sans', sans-serif; fill: #3d2b1f; }
+    </style>
+  </defs>
+
+  <!-- Sun dot -->
+  <circle cx="52" cy="12" r="7" class="logo-sun"/>
+
+  <!-- Palm left -->
+  <line x1="28" y1="75" x2="38" y2="35" class="logo-mark"/>
+  <line x1="38" y1="35" x2="20" y2="22" class="logo-mark"/>
+  <line x1="38" y1="35" x2="16" y2="30" class="logo-mark"/>
+  <line x1="38" y1="35" x2="22" y2="38" class="logo-mark"/>
+
+  <!-- Palm right -->
+  <line x1="76" y1="75" x2="66" y2="35" class="logo-mark"/>
+  <line x1="66" y1="35" x2="84" y2="22" class="logo-mark"/>
+  <line x1="66" y1="35" x2="88" y2="30" class="logo-mark"/>
+  <line x1="66" y1="35" x2="82" y2="38" class="logo-mark"/>
+
+  <!-- Central figure/flame shape -->
+  <path d="M52 28 C46 38, 40 50, 42 62 C44 70, 52 75, 52 75 C52 75, 60 70, 62 62 C64 50, 58 38, 52 28 Z" class="logo-mark"/>
+  <!-- Inner S curve -->
+  <path d="M52 38 C48 44, 56 52, 52 58" class="logo-mark" stroke-width="1.5"/>
+
+  <!-- Wave base -->
+  <path d="M20 80 C28 72, 36 82, 44 76 C50 71, 54 76, 52 82 C50 88, 44 90, 36 86 C28 82, 20 88, 20 80Z" class="logo-mark"/>
+  <path d="M84 80 C76 72, 68 82, 60 76 C54 71, 50 76, 52 82" class="logo-mark" stroke-width="1.2"/>
+
+  <!-- Brand name -->
+  <text x="108" y="52" font-family="'Cormorant Garamond', Georgia, serif" font-size="32" font-weight="300" letter-spacing="3" fill="#3d2b1f">SUP AVENTURA</text>
+
+  <!-- Tagline -->
+  <text x="108" y="72" font-family="'DM Sans', Arial, sans-serif" font-size="9" letter-spacing="4" fill="#6b3f2a" opacity="0.6">SANTA TERESA · COSTA RICA</text>
+</svg>
