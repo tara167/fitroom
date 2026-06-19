@@ -784,23 +784,41 @@ p { font-size: clamp(0.95rem, 1.5vw, 1.05rem); opacity: 0.85; }
 .service-card {
   background: var(--cream);
   border-radius: 1rem;
-  padding: 2rem 1.5rem;
-  text-align: center;
+  overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  display: block;
+  color: inherit;
 }
 
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(61, 43, 31, 0.12);
+  box-shadow: 0 8px 32px rgba(61, 43, 31, 0.15);
 }
 
-.service-card .icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.service-card--photo .service-card-img {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.service-card--photo .service-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.service-card--photo:hover .service-card-img img {
+  transform: scale(1.05);
+}
+
+.service-card--photo .service-card-body {
+  padding: 1.5rem;
 }
 
 .service-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
   color: var(--earth);
 }
@@ -813,18 +831,12 @@ p { font-size: clamp(0.95rem, 1.5vw, 1.05rem); opacity: 0.85; }
   line-height: 1.6;
 }
 
-.service-card a.learn-more {
+.service-card .learn-more {
   font-family: var(--font-sans);
   font-size: 0.85rem;
   color: var(--orange);
-  text-decoration: none;
   letter-spacing: 0.05em;
   font-weight: 600;
-  transition: color 0.2s;
-}
-
-.service-card a.learn-more:hover {
-  color: var(--cacao);
 }
 
 /* ===== HOW IT WORKS ===== */
