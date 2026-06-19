@@ -173,7 +173,8 @@ p { font-size: clamp(0.95rem, 1.5vw, 1.05rem); opacity: 0.85; }
   position: relative;
   overflow: hidden;
   padding-top: 100px;
-  background: linear-gradient(160deg, #3d2b1f 0%, #6b3f2a 40%, #5b8fa8 100%);
+  background: url("../assets/img/WhatsApp Image 2026-06-18 at 17.04.36.jpeg") center 40% / cover no-repeat;
+  background-color: #3d2b1f;
 }
 
 .hero__overlay {
