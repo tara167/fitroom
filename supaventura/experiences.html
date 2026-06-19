@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personalized Experiences — SUP Aventura</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/juli2..png" alt="SUP Aventura" height="56">
+      </a>
+      <nav class="site-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="sound-healing.html">Sound Healing</a>
+        <a href="cacao.html">Cacao</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="retreats.html">Retreats</a>
+      </nav>
+      <a href="https://wa.me/50683941825" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero" style="background: var(--green); color: var(--cream);">
+      <div class="container">
+        <span class="mono section-label" style="color: rgba(250,246,240,0.7);">Built Around You</span>
+        <h1 style="color: var(--cream);">Personalized Experiences</h1>
+        <p>No two adventures are the same. Every experience is built around you.</p>
+      </div>
+    </div>
+
+    <!-- WHAT'S POSSIBLE -->
+    <section class="features-section reveal">
+      <div class="container">
+        <h2>What's possible</h2>
+        <div class="features-list">
+          <div class="feature-item">🏄 SUP Yoga</div>
+          <div class="feature-item">🌊 Surf Lessons</div>
+          <div class="feature-item">💧 Waterfall Hikes</div>
+          <div class="feature-item">🏍️ ATV Adventures</div>
+          <div class="feature-item">🌿 Nature Walks</div>
+          <div class="feature-item">🥗 Healthy Meals</div>
+          <div class="feature-item">✨ Custom Combinations</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTOS -->
+    <div class="photo-pair" style="padding: 0 1.5rem;">
+      <img src="assets/img/sup.jpeg" alt="Two people on paddleboards" />
+      <img src="assets/img/WhatsApp Image 2026-06-18 at 17.01.56.jpeg" alt="Surfboard group on beach" />
+    </div>
+
+    <!-- DESIGNED AROUND YOU -->
+    <section class="dark-section reveal">
+      <div class="container">
+        <h2>Designed entirely around you.</h2>
+        <p>Tell Juli your dream day in Santa Teresa — she'll make it happen. Whether you want an adrenaline-filled adventure, a slow morning on the water, or a mix of movement and stillness — every detail is curated for you.</p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section reveal">
+      <div class="container">
+        <span class="mono section-label">What People Say</span>
+        <h2>Experiences that stay with you.</h2>
+        <div class="testimonials-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <blockquote>"Juli has been the ultimate host. From sunsets, surfing, paddle boarding, sound healing, yoga, waterfall atv adventures and just an amazing guide. Her love of nature and of Santa Teresa is infectious. I highly recommend"</blockquote>
+            <cite>Tara Tobin</cite>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <blockquote>"It was good to find her classes during my stay. Very easy to follow and translates as needed. Beautiful location in the surf garden."</blockquote>
+            <cite>Zachary Sanger</cite>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section reveal">
+      <div class="container">
+        <h2>What's your dream day?</h2>
+        <p>Reach out on WhatsApp and tell Juli what you're envisioning. She'll build it for you.</p>
+        <a href="https://wa.me/50683941825" class="btn btn-primary" target="_blank" rel="noopener noreferrer">WhatsApp Juli</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/juli2..png" alt="SUP Aventura" height="80">
+      </a>
+      <nav class="footer-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="sound-healing.html">Sound Healing</a>
+        <a href="cacao.html">Cacao</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 SUP Aventura · Santa Teresa, Costa Rica</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    setTimeout(() => {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }, 1000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retreats — SUP Aventura</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/juli2..png" alt="SUP Aventura" height="56">
+      </a>
+      <nav class="site-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="sound-healing.html">Sound Healing</a>
+        <a href="cacao.html">Cacao</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="retreats.html">Retreats</a>
+      </nav>
+      <a href="https://wa.me/50683941825" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero" style="background: var(--earth); color: var(--cream);">
+      <div class="container">
+        <span class="mono section-label" style="color: var(--orange-lt);">Multi-Day Journeys</span>
+        <h1 style="color: var(--cream);">Retreats in Santa Teresa</h1>
+        <p>Multi-day journeys woven with yoga, ceremony, adventure, and the magic of Costa Rica.</p>
+      </div>
+    </div>
+
+    <!-- WHAT'S INCLUDED -->
+    <section class="features-section reveal">
+      <div class="container">
+        <h2>What's included</h2>
+        <div class="features-list">
+          <div class="feature-item">🧘 Daily yoga</div>
+          <div class="feature-item">🍫 Cacao or sound healing ceremonies</div>
+          <div class="feature-item">🌊 Adventure experiences (waterfall, surf, SUP)</div>
+          <div class="feature-item">🥗 Healthy meals</div>
+          <div class="feature-item">🏡 Curated accommodation recommendations</div>
+          <div class="feature-item">📋 Fully personalized itinerary</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRING YOUR PEOPLE -->
+    <section class="dark-section reveal">
+      <div class="container">
+        <h2>You bring your people. We design the rest.</h2>
+        <p>Whether you're coming with a group of friends, a yoga community, or planning a solo immersion — Juli builds the retreat around your vision.</p>
+        <ul>
+          <li>Women's retreats</li>
+          <li>Yoga &amp; wellness retreats</li>
+          <li>Adventure + ceremony combos</li>
+          <li>Fully custom retreats</li>
+          <li>Accommodation guidance (curated, not booked)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PHOTO -->
+    <div class="section-photo" style="max-width: 100%; border-radius: 0; margin: 0;">
+      <img src="assets/img/grupo.jpeg" alt="Group of women on the beach in Santa Teresa" style="width:100%; height:420px; object-fit:cover; border-radius:0;" />
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section reveal">
+      <div class="container">
+        <span class="mono section-label">What People Say</span>
+        <h2>Journeys that transform.</h2>
+        <div class="testimonials-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <blockquote>"Juli has been the ultimate host. From sunsets, surfing, paddle boarding, sound healing, yoga, waterfall atv adventures and just an amazing guide. Her love of nature and of Santa Teresa is infectious. I highly recommend"</blockquote>
+            <cite>Tara Tobin</cite>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <blockquote>"I've attended a couple of ceremonies with Juli while in Santa Teresa and they were so wonderful! Juli herself is an amazing guide and kind soul. She creates such a peaceful and healing atmosphere. I would 100% recommend her to anyone!!"</blockquote>
+            <cite>Amanda Milner</cite>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section reveal">
+      <div class="container">
+        <h2>Tell us about your group.</h2>
+        <p>Reach out on WhatsApp and share your vision. Juli will design your retreat from there.</p>
+        <a href="https://wa.me/50683941825" class="btn btn-primary" target="_blank" rel="noopener noreferrer">WhatsApp Juli</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/juli2..png" alt="SUP Aventura" height="80">
+      </a>
+      <nav class="footer-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="sound-healing.html">Sound Healing</a>
+        <a href="cacao.html">Cacao</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 SUP Aventura · Santa Teresa, Costa Rica</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    setTimeout(() => {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }, 1000);
+  </script>
+
+</body>
+</html>
