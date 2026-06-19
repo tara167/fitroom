@@ -427,6 +427,27 @@ p { font-size: clamp(0.95rem, 1.5vw, 1.05rem); opacity: 0.85; }
   opacity: 0.4;
 }
 
+/* ── Photo strip ── */
+.photo-strip { overflow: hidden; }
+.photo-strip__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 280px;
+}
+.photo-strip__item {
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+.photo-strip__item:hover { transform: scale(1.03); }
+
+@media (max-width: 768px) {
+  .photo-strip__inner {
+    grid-template-columns: 1fr 1fr;
+    height: 400px;
+  }
+}
+
 /* ── Reveal animations ── */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: none; }
@@ -440,7 +461,8 @@ p { font-size: clamp(0.95rem, 1.5vw, 1.05rem); opacity: 0.85; }
   .about__grid,
   .retreats__grid,
   .contact__inner { grid-template-columns: 1fr; }
-  .retreats__visual { display: none; }
+  .retreats__visual { grid-template-columns: 1fr 1fr; }
+  .retreats__visual-block:first-child { grid-column: span 2; }
   .header__wa span { display: none; }
 }
 
