@@ -126,7 +126,7 @@ p { font-size: clamp(0.95rem, 1.5vw, 1.05rem); opacity: 0.85; }
   justify-content: space-between;
   gap: 1rem;
 }
-.logo__img { height: 52px; width: auto; }
+.logo__img { width: 200px; height: auto; }
 
 .header__right {
   display: flex;
@@ -404,7 +404,7 @@ p { font-size: clamp(0.95rem, 1.5vw, 1.05rem); opacity: 0.85; }
   padding: 3rem 0;
   text-align: center;
 }
-.footer__logo { margin: 0 auto 1.5rem; height: 48px; width: auto; filter: brightness(0) invert(1); opacity: 0.6; }
+.footer__logo { margin: 0 auto 1.5rem; width: 200px; height: auto; filter: brightness(0) invert(1); opacity: 0.6; }
 .footer__links {
   display: flex;
   justify-content: center;
