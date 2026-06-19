@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private Yoga — SUP Aventura</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/juli2..png" alt="SUP Aventura" height="56">
+      </a>
+      <nav class="site-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="sound-healing.html">Sound Healing</a>
+        <a href="cacao.html">Cacao</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="retreats.html">Retreats</a>
+      </nav>
+      <a href="https://wa.me/50683941825" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero" style="background: var(--earth); color: var(--cream);">
+      <div class="container">
+        <span class="mono section-label" style="color: var(--orange-lt);">Private Sessions</span>
+        <h1 style="color: var(--cream);">Private Yoga in Santa Teresa</h1>
+        <p>Sessions tailored to your body, your level, and your intention — from sunrise flows to restorative evenings.</p>
+      </div>
+    </div>
+
+    <!-- WHAT TO EXPECT -->
+    <section class="features-section reveal">
+      <div class="container">
+        <h2>What to expect</h2>
+        <div class="features-list">
+          <div class="feature-item">🌿 Hatha</div>
+          <div class="feature-item">🌊 Vinyasa</div>
+          <div class="feature-item">🌙 Yin</div>
+          <div class="feature-item">☀️ Ashtanga</div>
+          <div class="feature-item">🧘 All levels welcome</div>
+          <div class="feature-item">📍 Beach, villa, or jungle studio locations</div>
+          <div class="feature-item">👤 Private &amp; semi-private sessions</div>
+        </div>
+        <div class="section-photo">
+          <img src="assets/img/WhatsApp Image 2026-06-18 at 16.59.24.jpeg" alt="Juli teaching yoga in jungle studio" />
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section reveal">
+      <div class="container">
+        <span class="mono section-label">What Students Say</span>
+        <h2>Words from the mat.</h2>
+        <div class="testimonials-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <blockquote>"Honestly the best yoga class I've ever been to! I felt like I was floating afterwards. It's a beautiful venue and the instructor is incredible, very serene and helps correct you as you go along. I would come back to Costa Rica just for her classes! We went back repeatedly and I can't recommend her classes enough."</blockquote>
+            <cite>Aisling McMahon</cite>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <blockquote>"Huge thanks to Juli for an amazing introduction to yoga. She was professional, polite, and so patient with us as first-timers. She tailored the experience perfectly and made it something we truly enjoyed. Highly recommend!"</blockquote>
+            <cite>Ezgi Yildirim</cite>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <blockquote>"I absolutely adored Juli's class - the ashtanga session was wonderful, one of the best yoga classes I have been to outside of India! would truly recommend to go to her class, thank you Juli!!"</blockquote>
+            <cite>Liana Leung-Tack</cite>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section reveal">
+      <div class="container">
+        <h2>Ready to practice?</h2>
+        <p>Reach out on WhatsApp to book your private session with Juli.</p>
+        <a href="https://wa.me/50683941825" class="btn btn-primary" target="_blank" rel="noopener noreferrer">WhatsApp Juli</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/juli2..png" alt="SUP Aventura" height="80">
+      </a>
+      <nav class="footer-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="sound-healing.html">Sound Healing</a>
+        <a href="cacao.html">Cacao</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 SUP Aventura · Santa Teresa, Costa Rica</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    setTimeout(() => {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }, 1000);
+  </script>
+
+</body>
+</html>

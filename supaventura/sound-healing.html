@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sound Healing — SUP Aventura</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/juli2..png" alt="SUP Aventura" height="56">
+      </a>
+      <nav class="site-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="sound-healing.html">Sound Healing</a>
+        <a href="cacao.html">Cacao</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="retreats.html">Retreats</a>
+      </nav>
+      <a href="https://wa.me/50683941825" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero" style="background: var(--ocean); color: var(--cream);">
+      <div class="container">
+        <span class="mono section-label" style="color: rgba(250,246,240,0.7);">Deeply Restorative</span>
+        <h1 style="color: var(--cream);">Sound Healing</h1>
+        <p>Deeply restorative sessions using singing bowls, crystal bowls, and handpan — private or group.</p>
+      </div>
+    </div>
+
+    <!-- WHAT TO EXPECT -->
+    <section class="features-section reveal">
+      <div class="container">
+        <h2>What to expect</h2>
+        <div class="features-list">
+          <div class="feature-item">🎵 Tibetan singing bowls</div>
+          <div class="feature-item">🔮 Crystal bowls</div>
+          <div class="feature-item">🥁 Handpan</div>
+          <div class="feature-item">👤 Private or group settings</div>
+          <div class="feature-item">🌿 Deeply restorative</div>
+          <div class="feature-item">✨ Leave feeling grounded and renewed</div>
+        </div>
+        <p style="text-align:center; max-width:600px; margin: 2rem auto 0; font-family: var(--font-serif); font-size: 1.1rem; font-style: italic; color: var(--earth);">Sound has the power to shift your nervous system, quiet the mind, and open you to a deeper stillness. Each session is held in sacred space, tailored to where you are.</p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section reveal">
+      <div class="container">
+        <span class="mono section-label">What People Say</span>
+        <h2>Words from the sound bath.</h2>
+        <div class="testimonials-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <blockquote>"I have been to many of Juli's yoga y ceremonies she is a magical woman with very strong spiritual powers she makes me feel so good every time I'm with her! Pura Vida"</blockquote>
+            <cite>Cyrus Aylor</cite>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <blockquote>"Juli's grounded inner peace and positivity is contagious! Get ready to feel zen."</blockquote>
+            <cite>Gideon Grossman</cite>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section reveal">
+      <div class="container">
+        <h2>Ready to be restored?</h2>
+        <p>Reach out on WhatsApp to book a private or group sound healing session.</p>
+        <a href="https://wa.me/50683941825" class="btn btn-primary" target="_blank" rel="noopener noreferrer">WhatsApp Juli</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/juli2..png" alt="SUP Aventura" height="80">
+      </a>
+      <nav class="footer-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="sound-healing.html">Sound Healing</a>
+        <a href="cacao.html">Cacao</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 SUP Aventura · Santa Teresa, Costa Rica</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    setTimeout(() => {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }, 1000);
+  </script>
+
+</body>
+</html>
