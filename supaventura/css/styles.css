@@ -1256,3 +1256,22 @@ p { font-size: clamp(0.95rem, 1.5vw, 1.05rem); opacity: 0.85; }
     grid-template-columns: 1fr;
   }
 }
+
+/* Language Toggle */
+.lang-toggle {
+  background: transparent;
+  border: 1.5px solid var(--orange);
+  color: var(--orange);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.lang-toggle:hover {
+  background: var(--orange);
+  color: white;
+}
