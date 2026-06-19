@@ -686,6 +686,37 @@ p { font-size: clamp(0.95rem, 1.5vw, 1.05rem); opacity: 0.85; }
   }
 }
 
+/* ===== DESTINATIONS GRID ===== */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.destination-card {
+  background: var(--sand);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.destination-card--open {
+  background: var(--mist);
+  border: 2px dashed var(--orange-lt);
+}
+
+.destination-flag {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.destination-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
 .service-card {
   background: var(--cream);
   border-radius: 1rem;
