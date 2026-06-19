@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cacao Ceremonies — SUP Aventura</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/juli2..png" alt="SUP Aventura" height="56">
+      </a>
+      <nav class="site-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="sound-healing.html">Sound Healing</a>
+        <a href="cacao.html">Cacao</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="retreats.html">Retreats</a>
+      </nav>
+      <a href="https://wa.me/50683941825" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero" style="background: var(--cacao); color: var(--cream);">
+      <div class="container">
+        <span class="mono section-label" style="color: var(--orange-lt);">Sacred Ceremony</span>
+        <h1 style="color: var(--cream);">Cacao Ceremonies</h1>
+        <p>Heart-opening rituals with ceremonial cacao, breathwork, guided meditation, and sacred space.</p>
+      </div>
+    </div>
+
+    <!-- WHAT TO EXPECT -->
+    <section class="features-section reveal">
+      <div class="container">
+        <h2>What to expect</h2>
+        <div class="features-list">
+          <div class="feature-item">🍫 Ceremonial-grade cacao</div>
+          <div class="feature-item">🕯️ Intention setting</div>
+          <div class="feature-item">🌬️ Breathwork</div>
+          <div class="feature-item">🧘 Guided meditation</div>
+          <div class="feature-item">💛 Heart-opening practice</div>
+          <div class="feature-item">👥 Private &amp; group ceremonies</div>
+        </div>
+        <p style="text-align:center; max-width:620px; margin: 2rem auto 0; font-family: var(--font-serif); font-size: 1.1rem; font-style: italic; color: var(--earth);">Cacao has been used as a sacred plant medicine for thousands of years. Juli holds each ceremony with deep reverence, creating a container of safety, presence, and transformation for every participant.</p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section reveal">
+      <div class="container">
+        <span class="mono section-label">What People Say</span>
+        <h2>From the heart.</h2>
+        <div class="testimonials-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <blockquote>"I've attended a couple of ceremonies with Juli while in Santa Teresa and they were so wonderful! Juli herself is an amazing guide and kind soul. She creates such a peaceful and healing atmosphere. I would 100% recommend her to anyone!!"</blockquote>
+            <cite>Amanda Milner</cite>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <blockquote>"Amazing cacao ceremony! Thank you"</blockquote>
+            <cite>William Bench</cite>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <blockquote>"I have been to many of Juli's yoga y ceremonies she is a magical woman with very strong spiritual powers she makes me feel so good every time I'm with her! Pura Vida"</blockquote>
+            <cite>Cyrus Aylor</cite>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section reveal">
+      <div class="container">
+        <h2>Open your heart.</h2>
+        <p>Reach out on WhatsApp to book a private or group cacao ceremony with Juli.</p>
+        <a href="https://wa.me/50683941825" class="btn btn-primary" target="_blank" rel="noopener noreferrer">WhatsApp Juli</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/juli2..png" alt="SUP Aventura" height="80">
+      </a>
+      <nav class="footer-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="sound-healing.html">Sound Healing</a>
+        <a href="cacao.html">Cacao</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 SUP Aventura · Santa Teresa, Costa Rica</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    setTimeout(() => {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }, 1000);
+  </script>
+
+</body>
+</html>
