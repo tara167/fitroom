@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg" cx="55%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#2a2238"/>
+      <stop offset="60%" stop-color="#16121f"/>
+      <stop offset="100%" stop-color="#0e0c12"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c9a96e" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Ambient glow behind moon -->
+  <ellipse cx="920" cy="315" rx="220" ry="220" fill="url(#glow)"/>
+
+  <!-- Golden crescent moon -->
+  <circle cx="920" cy="315" r="130" fill="#c9a96e"/>
+  <circle cx="975" cy="280" r="108" fill="#16121f"/>
+
+  <!-- Thin sacred circle -->
+  <circle cx="920" cy="315" r="160" fill="none" stroke="#c9a96e" stroke-opacity="0.12" stroke-width="1"/>
+  <circle cx="920" cy="315" r="180" fill="none" stroke="#c9a96e" stroke-opacity="0.07" stroke-width="1"/>
+
+  <!-- Wordmark -->
+  <text x="120" y="280"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="110"
+    font-weight="300"
+    letter-spacing="0.12em"
+    fill="#f5f0e8">SACRADA</text>
+
+  <!-- Divider line -->
+  <line x1="120" y1="320" x2="280" y2="320" stroke="#c9a96e" stroke-opacity="0.5" stroke-width="1"/>
+
+  <!-- Tagline -->
+  <text x="120" y="380"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="32"
+    font-style="italic"
+    font-weight="300"
+    letter-spacing="0.04em"
+    fill="#c9a96e"
+    opacity="0.85">Sacred space for truth to breathe</text>
+
+  <!-- Mono sub-label -->
+  <text x="120" y="440"
+    font-family="'Courier New', monospace"
+    font-size="16"
+    letter-spacing="0.2em"
+    text-transform="uppercase"
+    fill="#f5f0e8"
+    opacity="0.35">SACRADA.SPACE</text>
+</svg>
