@@ -3,58 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sacrada · Intuitive Medium &amp; Breathwork</title>
-  <meta name="description" content="Connect with loved ones who've passed, receive guidance from your guides, and access the clearest version of yourself. Sacred mediumship sessions held with breathwork and deep care for your nervous system." />
-
-  <link rel="canonical" href="https://sacrada.space/" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <meta name="theme-color" content="#1a1422" />
+  <title>Fit Room — Pilates &amp; Training Studio · Santa Teresa, Costa Rica</title>
+  <meta name="description" content="Fit Room is a boutique Reformer & Mat Pilates studio in Santa Teresa, Costa Rica. Master-led, classes of max 7, engineered around your body. Book a class." />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Sacrada · Intuitive Medium &amp; Breathwork" />
-  <meta property="og:description" content="Connect with loved ones who've passed and receive sacred guidance. Book The Sacrada Session — $111." />
-  <meta property="og:url" content="https://sacrada.space/" />
-  <meta property="og:image" content="https://sacrada.space/assets/img/og-image.svg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Sacrada — Sacred space for truth to breathe" />
+  <meta property="og:title" content="Fit Room — Pilates Studio · Santa Teresa" />
+  <meta property="og:description" content="Move differently. Boutique Reformer & Mat Pilates on the coast of Costa Rica." />
+  <meta property="og:image" content="assets/img/studio-interior.jpg" />
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sacrada · Sacred space for truth to breathe" />
-  <meta name="twitter:description" content="Where breath meets truth. Book The Sacrada Session." />
-  <meta name="twitter:image" content="https://sacrada.space/assets/img/og-image.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
 
+  <!-- Type: Hanken Grotesk (clean grotesque) + Space Mono (technical labels) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/styles.css" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "The Sacrada Session",
-    "serviceType": "Breathwork, intuitive mediumship & somatic coaching",
-    "description": "A sacred, breath-guided session where truth surfaces — intuitive mediumship and somatic awareness, held with deep care for your nervous system.",
-    "provider": { "@type": "Organization", "name": "Sacrada", "url": "https://sacrada.space/" },
-    "areaServed": "Online and in person",
-    "offers": { "@type": "Offer", "price": "111", "priceCurrency": "USD", "url": "https://sacrada.space/" }
-  }
-  </script>
 </head>
 <body>
 
+  <!-- scroll progress -->
   <div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
-  <div class="stars" aria-hidden="true"></div>
 
   <!-- ============ HEADER ============ -->
   <header class="site-header" id="header">
     <div class="container header__inner">
-      <a href="#top" class="logo" aria-label="Sacrada home">
-        <img src="assets/img/sacrada-logo.svg" alt="Sacrada" class="logo__img" />
+      <a href="#top" class="logo" aria-label="Fit Room home">
+        <span class="logo__fit">FIT</span>
+        <svg class="logo__pulse" viewBox="0 0 46 24" aria-hidden="true">
+          <polyline points="0,12 11,12 15,12 19,4 23,20 27,8 31,12 46,12" />
+        </svg>
+        <span class="logo__room">ROOM</span>
       </a>
-      <a href="/book.html" class="header__cta js-book">Book a Session</a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#about"><i>01</i> Studio</a>
+        <a href="#classes"><i>02</i> Classes</a>
+        <a href="#standard"><i>03</i> Standard</a>
+        <a href="#pricing"><i>05</i> Pricing</a>
+        <a href="#team"><i>06</i> Team</a>
+        <a href="#contact"><i>08</i> Visit</a>
+      </nav>
+
+      <a href="#contact" class="btn btn--solid header__cta">Book a class</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about"><i>01</i> Studio</a>
+      <a href="#classes"><i>02</i> Classes</a>
+      <a href="#standard"><i>03</i> Standard</a>
+      <a href="#pricing"><i>05</i> Pricing</a>
+      <a href="#team"><i>06</i> Team</a>
+      <a href="#contact"><i>08</i> Visit</a>
+      <a href="#contact" class="btn btn--solid">Book a class</a>
     </div>
   </header>
 
@@ -62,397 +66,349 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="moon" aria-hidden="true">☽</div>
       <div class="container">
-        <div class="hero__content">
-          <span class="mono gold hero__label">Mediumship · Breathwork · Sacred Guidance</span>
-          <h1 class="hero__title">A message<br/>is waiting<br/>for you.</h1>
-          <div class="hero__divider"></div>
-          <p class="hero__tagline">I connect to what's beyond the visible — divine guidance, your energy, your truth. And sometimes, those who've passed have something to say too.</p>
-          <div class="hero__cta">
-            <a href="/book.html" class="btn btn--gold js-book">Book The Sacrada Session</a>
-            <a href="#about" class="btn btn--outline">Learn more ↓</a>
+        <div class="hero__top">
+          <span class="mono">09°38′N&nbsp;&nbsp;085°10′W</span>
+          <span class="mono">Pilates &amp; Training Studio</span>
+          <span class="mono">Santa&nbsp;Teresa&nbsp;— CR</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="reveal-line"><span>Move</span></span>
+          <span class="reveal-line"><span>differently<em>.</em></span></span>
+        </h1>
+
+        <div class="hero__bottom">
+          <div class="hero__lead reveal">
+            <p>Boutique Reformer &amp; Mat Pilates on the coast of Costa Rica. Master-led, engineered around your body — and the way you want to feel.</p>
+            <div class="hero__actions">
+              <a href="#contact" class="btn btn--solid">Book a class</a>
+              <a href="#about" class="btn btn--line">Explore the studio →</a>
+            </div>
           </div>
+
+          <div class="hero__stats reveal">
+            <div class="stat"><span class="stat__k" data-count="7">7</span><span class="stat__l mono">max / class</span></div>
+            <div class="stat"><span class="stat__k" data-count="200">200</span><em>+</em><span class="stat__l mono">hrs trained</span></div>
+            <div class="stat"><span class="stat__k" data-count="3">3</span><span class="stat__l mono">studios</span></div>
+          </div>
+        </div>
+
+        <div class="hero__media reveal">
+          <img src="assets/img/studio-interior.jpg" alt="Inside the Fit Room studio — bright reformer room in Santa Teresa" />
+          <span class="hero__media-tag mono">↳ The studio / Santa Teresa</span>
         </div>
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Reformer</span><i>/</i><span>Jump Reformer</span><i>/</i><span>Mat</span><i>/</i><span>MOTR</span><i>/</i>
+        <span>Reformer</span><i>/</i><span>Jump Reformer</span><i>/</i><span>Mat</span><i>/</i><span>MOTR</span><i>/</i>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT / MANIFESTO ============ -->
     <section class="about section" id="about">
       <div class="container about__grid">
-        <div class="about__copy reveal">
-          <div class="section-label mono">The gift</div>
-          <blockquote class="about__quote">
-            "I didn't choose this. It chose me."
+        <div class="about__head">
+          <p class="label mono"><span>01</span> The idea</p>
+        </div>
+        <div class="about__copy">
+          <h2 class="reveal">Curiosity is<br/>the first rep.</h2>
+          <p class="reveal">Fit Room was founded by <strong>Eileen Ramírez</strong>, a Costa Rican who believes movement belongs to everyone. We built a calm, precise space a few steps from the sand — fully-equipped Reformers, master-level teaching, and a method that respects the original Pilates principles.</p>
+          <p class="reveal">No gimmicks, no temporary workout high. Just genuine progress in posture, strength and mobility — the kind your body keeps. Come curious. Leave stronger.</p>
+          <blockquote class="pull reveal">
+            <span class="mono">“</span>You are only as young as your spine is flexible.
+            <cite>Joseph Pilates</cite>
           </blockquote>
-          <p>As far back as 2012 I could feel them — presences, voices, something just beyond the edge of what I could explain. For years I didn't know if it was real. I was a Pilates teacher. A normal person. I pushed it down and kept moving.</p>
-          <p>Then my father died. He came to me. And after that, it didn't stop.</p>
-          <p>What followed wasn't graceful. It was disorienting, overwhelming, and at times frightening. I had to do serious inner work — through grief, through meditation, through my own healing — to learn how to hold what was coming through without being consumed by it. That process took years. It took everything.</p>
-          <p>What I have now feels like a gift I had to earn. When I channel, I allow my consciousness to step back and become a witness. Something else enters — something I trust completely, something I know is protected and safe.</p>
-          <p>I built Sacrada for the person who is curious about the mystical but hasn't found a container that feels real. No performance. No promises. Just clarity, knowledge, and choice — and the space to start finding that inner voice for themselves.</p>
-          <p style="font-style:italic; opacity:0.7;">— Tara</p>
         </div>
-        <div class="about__visual reveal" aria-hidden="true">
-          <div class="about__frame"></div>
-          <div class="about__motif">
-            <svg class="about__motif-svg" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <defs>
-                <radialGradient id="motif-bg" cx="50%" cy="50%" r="70%">
-                  <stop offset="0%" stop-color="#2a2238"/>
-                  <stop offset="100%" stop-color="#0e0c12"/>
-                </radialGradient>
-                <radialGradient id="moon-glow" cx="45%" cy="48%" r="55%">
-                  <stop offset="0%" stop-color="#c9a96e" stop-opacity="0.25"/>
-                  <stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
-                </radialGradient>
-              </defs>
-              <!-- Background -->
-              <rect width="400" height="500" fill="url(#motif-bg)"/>
-              <!-- Ambient glow -->
-              <ellipse cx="200" cy="240" rx="180" ry="180" fill="url(#moon-glow)" class="motif-glow"/>
-              <!-- Seed of life: outer circle -->
-              <circle cx="200" cy="240" r="130" fill="none" stroke="#c9a96e" stroke-opacity="0.12" stroke-width="0.8"/>
-              <!-- Seed of life petal circles (6 + center) -->
-              <circle cx="200" cy="240" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
-              <circle cx="265" cy="240" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
-              <circle cx="232" cy="184" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
-              <circle cx="168" cy="184" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
-              <circle cx="135" cy="240" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
-              <circle cx="168" cy="296" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
-              <circle cx="232" cy="296" r="65" fill="none" stroke="#c9a96e" stroke-opacity="0.13" stroke-width="0.8"/>
-              <!-- Outer containing ring -->
-              <circle cx="200" cy="240" r="155" fill="none" stroke="#c9a96e" stroke-opacity="0.08" stroke-width="0.6"/>
-              <!-- Crescent moon -->
-              <circle cx="200" cy="210" r="68" fill="#c9a96e" class="motif-moon"/>
-              <circle cx="228" cy="196" r="57" fill="#0e0c12"/>
-              <!-- Small star accent -->
-              <text x="148" y="345" font-size="12" fill="#c9a96e" opacity="0.4" text-anchor="middle">✦</text>
-              <text x="252" y="152" font-size="8" fill="#c9a96e" opacity="0.3" text-anchor="middle">✦</text>
-            </svg>
-          </div>
+        <div class="about__media reveal">
+          <img src="assets/img/exterior-tree.jpg" alt="The Fit Room studio in Santa Teresa, framed by a tree" />
         </div>
       </div>
     </section>
 
-    <!-- ============ PILLARS ============ -->
-    <section class="section" style="padding-top:0">
-      <div class="container">
-        <div class="pillars__grid">
-          <div class="pillar reveal">
-            <span class="pillar__num">01</span>
-            <h3>Breathwork</h3>
-            <p>Breath is the portal. I use conscious breathwork to open you — releasing what blocks you from receiving truth.</p>
-          </div>
-          <div class="pillar reveal">
-            <span class="pillar__num">02</span>
-            <h3>Intuitive Mediumship</h3>
-            <p>I channel messages from loved ones who've passed, spirit guides, and angelic energy — delivered with clarity, warmth and deep respect.</p>
-          </div>
-          <div class="pillar reveal">
-            <span class="pillar__num">03</span>
-            <h3>Somatic &amp; Trauma-Informed</h3>
-            <p>Every session is held with deep care for your nervous system. You are always safe here. Always seen.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ WHAT TO EXPECT ============ -->
-    <section class="expect section" id="expect">
+    <!-- ============ CLASSES ============ -->
+    <section class="classes section" id="classes">
       <div class="container">
         <header class="section-head reveal">
-          <p class="label mono"><span>The journey</span></p>
-          <h2>What to expect</h2>
+          <p class="label mono"><span>02</span> Classes</p>
+          <h2>Built on the springs.</h2>
+          <p class="section-head__lead">From your first Reformer session to a jump-board flow — there's a place for you on every level.</p>
         </header>
-        <div class="pillars__grid pillars__grid--four">
-          <div class="pillar reveal">
-            <span class="pillar__num">01</span>
-            <h3>Reserve your space</h3>
-            <p>Choose a time that works for you and book in a few clicks.</p>
-          </div>
-          <div class="pillar reveal">
-            <span class="pillar__num">02</span>
-            <h3>We connect</h3>
-            <p>Online from anywhere, or in person. You'll receive everything you need after booking.</p>
-          </div>
-          <div class="pillar reveal">
-            <span class="pillar__num">03</span>
-            <h3>Breathe &amp; receive</h3>
-            <p>A breath-guided opening, then an intuitive reading — held in safe, sacred space.</p>
-          </div>
-          <div class="pillar reveal">
-            <span class="pillar__num">04</span>
-            <h3>Integrate</h3>
-            <p>Space for your questions, so the clarity stays with you long after we close.</p>
-          </div>
+
+        <div class="class-grid">
+          <article class="class-card reveal">
+            <div class="class-card__img"><img src="assets/img/reformer-class.jpg" alt="Reformer Pilates" loading="lazy" /></div>
+            <div class="class-card__body">
+              <div class="class-card__meta"><span class="mono">01</span><span class="mono">All levels</span></div>
+              <h3>Reformer</h3>
+              <p>Spring-loaded resistance for long, strong, balanced muscles. Our signature class — scaled to you.</p>
+            </div>
+          </article>
+
+          <article class="class-card reveal">
+            <div class="class-card__img"><img src="assets/img/jump-reformer.jpg" alt="Jump Reformer" loading="lazy" /></div>
+            <div class="class-card__body">
+              <div class="class-card__meta"><span class="mono">02</span><span class="mono">Cardio</span></div>
+              <h3>Jump Reformer</h3>
+              <p>Cardio meets Pilates on the jump board. Low impact on the joints, high on energy.</p>
+            </div>
+          </article>
+
+          <article class="class-card reveal">
+            <div class="class-card__img"><img src="assets/img/IMG_7286.jpeg" alt="Mat Pilates" loading="lazy" /></div>
+            <div class="class-card__body">
+              <div class="class-card__meta"><span class="mono">03</span><span class="mono">Core</span></div>
+              <h3>Mat</h3>
+              <p>Classical Pilates on the mat — core, control, breath. Nothing between you and the floor but intention.</p>
+            </div>
+          </article>
+
+          <article class="class-card reveal">
+            <div class="class-card__img"><img src="assets/img/motr-class.jpg" alt="MOTR class at Fit Room — Movement on the Roller with resistance cables" loading="lazy" /></div>
+            <div class="class-card__body">
+              <div class="class-card__meta"><span class="mono">04</span><span class="mono">Dynamic</span></div>
+              <h3>MOTR</h3>
+              <p>Movement on the Roller — a foam roller fused with resistance cables. A dynamic, full-body workout that defies your balance and builds real athletic performance.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ ORACLE PULL ============ -->
-    <section class="oracle section" id="oracle">
-      <div class="container oracle__inner">
-        <div class="oracle__card" aria-hidden="true"></div>
-        <div class="reveal">
-          <div class="section-label mono oracle__label">A gentle first step</div>
-          <h2 class="oracle__title">Oracle Card Pull</h2>
-          <div class="oracle__price-row">
-            <span class="oracle__price">$29</span>
-            <span class="oracle__per mono">recorded · delivered to you</span>
-          </div>
-          <p class="oracle__desc">Not ready for a full session? Begin with a single card. A short, recorded reading — one card pulled and channeled just for you.</p>
-          <ul class="oracle__list">
-            <li>One card pulled from the Archangel Metatron oracle deck (or whichever archangel energy comes through)</li>
-            <li>A short voice or video message (2–3 minutes) sharing what comes through</li>
-            <li>Delivered within 24–48 hours, straight to your inbox or DMs</li>
-            <li>No live call required — receive it in your own time, your own space</li>
-          </ul>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhU9LJsIbBn0fw8i4tOeJOT6DsIy4X0Zn2VXx7oI3GNv3uEQ/viewform" class="btn btn--outline">Get Your Oracle Pull — $29</a>
-          <p class="oracle__upsell">Pay via PayPal · Zelle available on request · Delivered within 24–48 hours.</p>
-        </div>
+    <!-- ============ THE STANDARD (dark) ============ -->
+    <section class="standard section" id="standard">
+      <div class="container">
+        <header class="section-head section-head--light reveal">
+          <p class="label mono"><span>03</span> The standard</p>
+          <h2>Green flags only.</h2>
+          <p class="section-head__lead">What to look for in a Pilates studio — and what you'll find in every one of ours.</p>
+        </header>
+
+        <ol class="standard-list">
+          <li class="reveal"><span class="standard-list__k mono">01</span><div><h3>Master Trainer leadership</h3><p>Every studio is directed by a Master Trainer, ensuring high teaching standards and real client results.</p></div></li>
+          <li class="reveal"><span class="standard-list__k mono">02</span><div><h3>Personalized attention</h3><p>Small classes — <strong>max 7</strong> — so instructors know your name, your body and your goals.</p></div></li>
+          <li class="reveal"><span class="standard-list__k mono">03</span><div><h3>Certified instructors &amp; quality equipment</h3><p>200+ hours of training, a focus on anatomy, and top-brand machines designed with biomechanics in mind.</p></div></li>
+          <li class="reveal"><span class="standard-list__k mono">04</span><div><h3>Respect for the method</h3><p>Adherence to original Pilates principles — longevity over trends. No gimmicks here.</p></div></li>
+          <li class="reveal"><span class="standard-list__k mono">05</span><div><h3>Real results &amp; progression</h3><p>Designed for genuine improvement in posture, strength and mobility — beyond a temporary workout high.</p></div></li>
+          <li class="reveal"><span class="standard-list__k mono">06</span><div><h3>Technique &amp; adaptability</h3><p>Proper alignment and intentional movement, tailored so every level is accommodated.</p></div></li>
+        </ol>
       </div>
     </section>
 
-    <!-- ============ THE SESSION ============ -->
-    <section class="session section" id="session">
-      <div class="container session__inner">
-        <div class="session__head reveal">
-          <div class="section-label mono">The offering</div>
-          <h2>The Sacrada<br/>Session</h2>
-          <div class="session__price">$111</div>
-          <div class="session__per mono">per session · online or in person</div>
-          <a href="/book.html" class="btn btn--gold js-book">Reserve your space</a>
-          <p class="session__note">Each session is held in sacred space and tailored entirely to you. No two sessions are the same.</p>
-        </div>
-        <div class="reveal">
-          <ul class="session__list">
-            <li>Intuitive mediumship — messages from loved ones who've passed, guides, and angelic energy</li>
-            <li>A breath-guided opening to clear and ground your energy before the reading</li>
-            <li>Chakra awareness and energy clearing woven throughout</li>
-            <li>Somatic holding — your nervous system is cared for at every step</li>
-            <li>Trauma-informed space — you set the pace, always</li>
-            <li>Time for your questions and gentle integration to close</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ FAQ ============ -->
-    <section class="faq section" id="faq">
+    <!-- ============ BENEFITS ============ -->
+    <section class="benefits section">
       <div class="container">
         <header class="section-head reveal">
-          <p class="label mono"><span>Questions</span></p>
-          <h2>Frequently asked</h2>
+          <p class="label mono"><span>04</span> Why it works</p>
+          <h2>Your body will thank you.</h2>
         </header>
-        <div class="faq__list">
-
-          <div class="faq__item reveal">
-            <button class="faq__question" aria-expanded="false">
-              What actually happens in a Sacrada Session?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>We begin with a breath-guided opening — a gentle, conscious breathwork practice that settles your nervous system and opens the channel to receive. From there, I connect intuitively: to loved ones who've passed, to your guides and angelic energy, and to the clearest version of yourself. Messages, images and impressions come through naturally and I share what I receive. Somatic awareness is woven throughout so your body stays grounded and safe. We close with dedicated time for your questions and gentle integration.</p>
-            </div>
-          </div>
-
-          <div class="faq__item reveal">
-            <button class="faq__question" aria-expanded="false">
-              Can you connect with someone specific who has passed?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>Yes — you're welcome to hold the intention of connecting with a specific person before and during the session. I'll open the channel and share what comes through. That said, I work with what presents itself: sometimes the person you hope to reach comes through clearly; sometimes a different guide or energy steps forward with a message that's needed most. I'll always share honestly what I receive.</p>
-            </div>
-          </div>
-
-          <div class="faq__item reveal">
-            <button class="faq__question" aria-expanded="false">
-              What if nothing comes through during my session?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>In over four years of doing this work, I have not experienced a session where nothing comes through. That said, I don't make guarantees — every channel opens differently. What I can promise is that I show up fully, I work the channel with care, and I share everything I receive. If a message feels quiet or gentle rather than dramatic, that is still a message.</p>
-            </div>
-          </div>
-
-          <div class="faq__item reveal">
-            <button class="faq__question" aria-expanded="false">
-              Do I need to bring anything — a photo, object, or name?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>Nothing is required. You don't need a photo, an object, or to give me any information in advance. You're welcome to hold a name or intention quietly in your heart — that's enough. Part of what makes a reading feel meaningful is that what comes through is specific and unsolicited.</p>
-            </div>
-          </div>
-
-          <div class="faq__item reveal">
-            <button class="faq__question" aria-expanded="false">
-              What if I'm nervous or skeptical — does that affect the session?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>Not at all. Nerves are completely normal — this kind of work can feel unfamiliar, even for people who've wanted it for a long time. The breathwork opening helps settle that. As for skepticism: you don't need to believe anything for the session to work. An open mind is enough. What comes through will speak for itself.</p>
-            </div>
-          </div>
-
-          <div class="faq__item reveal">
-            <button class="faq__question" aria-expanded="false">
-              How long is a session?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>Sessions run for <strong>60–75 minutes</strong>. Please allow a little buffer afterwards — it's worth giving yourself time to settle before stepping back into your day.</p>
-            </div>
-          </div>
-
-          <div class="faq__item reveal">
-            <button class="faq__question" aria-expanded="false">
-              Do you offer online sessions?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>Yes. Sessions are offered online via <strong>a private video call</strong>, so you can join from wherever you are in the world. All you need is a quiet, comfortable space where you won't be disturbed, a reliable internet connection, and a pair of headphones if possible.</p>
-            </div>
-          </div>
-
-          <div class="faq__item reveal">
-            <button class="faq__question" aria-expanded="false">
-              I've never done breathwork — is it safe?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>Yes. The breathwork I use is gentle, intentional and trauma-informed. You are always in the driver's seat — you set the pace, and we go only as deep as feels right for you. If at any point something doesn't feel good, we adapt. Your safety and comfort come first, always.</p>
-            </div>
-          </div>
-
-          <div class="faq__item reveal">
-            <button class="faq__question" aria-expanded="false">
-              How is this different from a psychic reading?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>Traditional readings often focus on the past or on predicting future events. A Sacrada Session is different: I connect you to your <em>highest self</em> — the part of you that already holds the clarity and wisdom you're seeking. The guidance that comes through is empowering, not prescriptive. You leave with more access to your own knowing, not more dependency on someone else's.</p>
-            </div>
-          </div>
-
-          <div class="faq__item reveal">
-            <button class="faq__question" aria-expanded="false">
-              What do I need to prepare?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>Come as you are. No preparation is needed. Wear something comfortable, have a glass of water nearby, and find a quiet space where you won't be interrupted. If there's something specific you'd like to explore, you're welcome to hold that intention — but there's no homework required.</p>
-            </div>
-          </div>
-
-          <div class="faq__item reveal">
-            <button class="faq__question" aria-expanded="false">
-              How do I pay?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>The session investment is <strong>$111</strong>. Payment is confirmed at the time of booking — you'll be guided through this when you reserve your space.</p>
-            </div>
-          </div>
-
-          <div class="faq__item reveal">
-            <button class="faq__question" aria-expanded="false">
-              What if I need to reschedule?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>Life happens. You can reschedule with at least <strong>24 hours' notice</strong> with no problem at all. Please reach out as soon as you know — this allows your space to be offered to someone on the waitlist.</p>
-            </div>
-          </div>
-
+        <div class="benefits-grid">
+          <div class="benefit reveal"><span class="benefit__k mono">01</span><h3>Posture</h3><p>Stand taller. Realign and unwind the desk, the travel, the years.</p></div>
+          <div class="benefit reveal"><span class="benefit__k mono">02</span><h3>Strength</h3><p>Deep core and stabilising muscles — the strength you actually use.</p></div>
+          <div class="benefit reveal"><span class="benefit__k mono">03</span><h3>Mobility</h3><p>Move freely. Joints, spine and hips that open instead of ache.</p></div>
+          <div class="benefit reveal"><span class="benefit__k mono">04</span><h3>Balance</h3><p>Control and coordination that carry into every sport and every day.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ============ TESTIMONIAL ============ -->
-    <section class="section" id="testimonial">
+    <!-- ============ PRICING ============ -->
+    <section class="pricing section" id="pricing">
       <div class="container">
-        <div class="reveal" style="max-width: 720px; margin: 0 auto; text-align: center;">
-          <div class="section-label mono" style="margin-bottom: 2rem;">A client's words</div>
-          <blockquote style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 300; font-style: italic; color: var(--cream); opacity: 0.9; line-height: 1.8; margin: 0 0 2rem;">
-            "My reading with Sacrada was one of the most meaningful spiritual experiences I've ever had. The messages that came through were incredibly accurate, deeply comforting, and brought me a sense of peace and clarity that stayed with me long after our session.
-            <br/><br/>
-            What makes this work so special is not only the gift of mediumship, but the warmth, compassion, and integrity brought to every session. I felt completely safe, supported, and genuinely cared for throughout.
-            <br/><br/>
-            I left feeling lighter, more connected, and with a renewed trust in the guidance available to all of us. I am deeply grateful and would wholeheartedly recommend Sacrada to anyone seeking healing, connection, or spiritual insight."
-          </blockquote>
-          <p class="mono" style="font-size: 0.8rem; letter-spacing: 3px; color: var(--gold); opacity: 0.6;">— MAXINE B.</p>
+        <header class="section-head reveal">
+          <p class="label mono"><span>05</span> Rates</p>
+          <h2>Simple, honest pricing.</h2>
+          <p class="section-head__lead">Memberships for locals, packs for regulars, drop-ins for travelers. All prices in USD.</p>
+        </header>
+
+        <!-- Founder's Rate — the offer we're handing out in town -->
+        <div class="founder reveal">
+          <div class="founder__main">
+            <span class="founder__tag mono">● Limited — first 30 clients</span>
+            <h3>Founder's Rate</h3>
+            <p>Be one of our first 30 members: <strong>15% off</strong> the local membership <strong>+ 1 private session</strong> on the house.</p>
+          </div>
+          <a href="#contact" class="btn btn--solid">Claim your spot</a>
+        </div>
+
+        <div class="price-grid">
+          <article class="price-card reveal">
+            <div class="price-card__head"><span class="mono">Best value</span><h3>Class Packs</h3></div>
+            <ul class="price-list">
+              <li><span>4 classes</span><span class="price-list__p"><s>$130</s> $111</span></li>
+              <li><span>8 classes</span><span class="price-list__p"><s>$234</s> $199</span></li>
+              <li><span>12 classes</span><span class="price-list__p"><s>$335</s> $277</span></li>
+            </ul>
+            <p class="price-card__note">Lowest price per class · member pricing.</p>
+          </article>
+
+          <article class="price-card price-card--feature reveal">
+            <div class="price-card__head"><span class="mono">For locals</span><h3>Local Membership</h3></div>
+            <div class="price-big">$85<span class="mono">/ month</span></div>
+            <ul class="price-checks">
+              <li>Discounted packs &amp; better rates</li>
+              <li>Access to all 3 studios nationwide</li>
+              <li>Invitations to wellness events</li>
+              <li>Cédula or DIMEX required</li>
+            </ul>
+            <a href="#contact" class="btn btn--solid">Book a class</a>
+          </article>
+
+          <article class="price-card reveal">
+            <div class="price-card__head"><span class="mono">No commitment</span><h3>Drop-in</h3></div>
+            <ul class="price-list">
+              <li><span>Walk-in class</span><span class="price-list__p">$40</span></li>
+              <li><span>Pilates Card</span><span class="price-list__p">$215</span></li>
+            </ul>
+            <p class="price-card__note">Pilates Card = 6 classes, valid for 2 months.</p>
+          </article>
+        </div>
+
+        <p class="pricing__fine mono reveal">Prices in USD · Restrictions apply · Reservation required via WhatsApp</p>
+      </div>
+    </section>
+
+    <!-- ============ TEAM ============ -->
+    <section class="team section" id="team">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="label mono"><span>06</span> Team</p>
+          <h2>On the springs with you.</h2>
+        </header>
+        <div class="team-grid">
+          <article class="member reveal">
+            <div class="member__img"><img src="assets/img/team-eileen.jpg" alt="Eileen Ramírez, founder of Fit Room" loading="lazy" /></div>
+            <div class="member__body">
+              <p class="member__role mono">Founder</p>
+              <h3>Eileen Ramírez</h3>
+              <p>A Costa Rican on a mission to bring world-class movement to the coast. Eileen built Fit Room around one belief: movement is for everyone.</p>
+            </div>
+          </article>
+          <article class="member reveal">
+            <div class="member__img"><img src="assets/img/team-tara.jpg" alt="Tara Tobin, Master Pilates Instructor" loading="lazy" /></div>
+            <div class="member__body">
+              <p class="member__role mono">Master Instructor</p>
+              <h3>Tara Tobin</h3>
+              <p>Certified Master instructor with 26 years of experience. Tara's precise, intuitive teaching sets the standard for the studio.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ CTA ============ -->
-    <section class="cta-banner section">
-      <div class="container cta-banner__inner reveal">
-        <h2>A message may be<br/>waiting for you.</h2>
-        <p>Sacred space is open. Come as you are.</p>
-        <a href="/book.html" class="btn btn--gold js-book">Book The Sacrada Session — $111</a>
+    <!-- ============ LOCATIONS ============ -->
+    <section class="locations section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="label mono"><span>07</span> The network</p>
+          <h2>Three studios, one standard.</h2>
+        </header>
+        <div class="loc-grid">
+          <div class="loc reveal"><span class="mono">CR / 01</span><h3>Escazú</h3></div>
+          <div class="loc loc--active reveal"><span class="mono">CR / 02</span><h3>Santa Teresa</h3><span class="loc__pin mono">● You are here</span></div>
+          <div class="loc reveal"><span class="mono">CR / 03</span><h3>Jacó</h3></div>
+        </div>
       </div>
     </section>
 
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band">
+      <div class="container cta-band__inner reveal">
+        <div>
+          <p class="label mono"><span>↳</span> Ready when you are</p>
+          <h2>Your first class<br/>is the hard part.</h2>
+        </div>
+        <a href="#contact" class="btn btn--solid btn--lg">Book a class</a>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <header class="section-head section-head--left reveal">
+          <p class="label mono"><span>08</span> Visit</p>
+          <h2>Come see us.</h2>
+        </header>
+        <div class="contact__grid">
+          <div class="contact__form-col reveal">
+            <p class="contact__lead">Leave your details and we'll get you booked — or message us on WhatsApp for the fastest reply.</p>
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form">
+              <input type="hidden" name="form-name" value="contact" />
+              <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+              <div class="form__row">
+                <label class="field"><span class="mono">Name</span><input type="text" name="name" required placeholder="Your name" /></label>
+                <label class="field"><span class="mono">Email</span><input type="email" name="email" required placeholder="you@email.com" /></label>
+              </div>
+              <label class="field"><span class="mono">Phone / WhatsApp <small>(optional)</small></span><input type="tel" name="phone" placeholder="+506 …" /></label>
+              <label class="field"><span class="mono">What can we help with?</span><textarea name="message" rows="4" placeholder="I'd love to book a trial Reformer class…"></textarea></label>
+              <button type="submit" class="btn btn--solid btn--lg">Send message</button>
+              <p class="form__status mono" id="formStatus" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <aside class="contact__info reveal">
+            <div class="info-block">
+              <h3 class="mono">Location</h3>
+              <!-- TODO: replace with exact street address -->
+              <p>Santa Teresa, Cóbano<br/>Puntarenas, Costa Rica</p>
+            </div>
+            <div class="info-block">
+              <h3 class="mono">Hours</h3>
+              <!-- TODO: confirm real opening hours -->
+              <ul class="hours">
+                <li><span>Mon – Fri</span><span>6:00 – 19:00</span></li>
+                <li><span>Saturday</span><span>7:00 – 12:00</span></li>
+                <li><span>Sunday</span><span>Closed</span></li>
+              </ul>
+            </div>
+            <div class="info-block">
+              <h3 class="mono">Contact</h3>
+              <p class="info-contact">
+                <a href="#" class="js-whatsapp">WhatsApp · <span class="js-whatsapp-num">+506 7054 6982</span></a><br/>
+                <a href="https://www.instagram.com/fitroom_santateresa" target="_blank" rel="noopener">@fitroom_santateresa</a>
+              </p>
+            </div>
+            <div class="map">
+              <iframe title="Fit Room on the map" src="https://www.google.com/maps?q=Fit%20Room%20Santa%20Teresa%20Costa%20Rica&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ============ FOOTER ============ -->
-  <footer>
+  <footer class="site-footer">
     <div class="container footer__inner">
-      <nav class="footer__nav" aria-label="Footer navigation">
-        <a href="#oracle">Oracle Pull</a>
-        <a href="#session">The Session</a>
-        <a href="#expect">What to expect</a>
-        <a href="#faq">FAQ</a>
-        <a href="/book.html" target="_blank" rel="noopener noreferrer" class="js-book">Book</a>
-      </nav>
-      <p class="mono footer__copy">© 2026 Sacrada · Sacred space for truth to breathe</p>
-      <div class="footer__legal">
-        <a href="https://www.instagram.com/sacrada.space" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.tiktok.com/@sacrada.space" target="_blank" rel="noopener noreferrer">TikTok</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
+      <div class="footer__brand">
+        <a href="#top" class="logo logo--light" aria-label="Fit Room home">
+          <span class="logo__fit">FIT</span>
+          <svg class="logo__pulse" viewBox="0 0 46 24" aria-hidden="true"><polyline points="0,12 11,12 15,12 19,4 23,20 27,8 31,12 46,12" /></svg>
+          <span class="logo__room">ROOM</span>
+        </a>
+        <p class="mono">Pilates &amp; Training · Santa Teresa, CR</p>
       </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#about">Studio</a><a href="#classes">Classes</a><a href="#standard">Standard</a>
+        <a href="#team">Team</a><a href="#contact">Visit</a>
+        <a href="https://www.instagram.com/fitroom_santateresa" target="_blank" rel="noopener">Instagram ↗</a>
+      </nav>
+      <p class="footer__tag">Move<br/>differently<em>.</em></p>
+    </div>
+    <div class="container footer__base mono">
+      <span>© <span id="year">2026</span> Fit Room Santa Teresa</span>
+      <span>Escazú / Santa Teresa / Jacó</span>
     </div>
   </footer>
 
-  <script>
-/* ── Scroll progress ── */
-const scrollBar = document.getElementById('scrollBar');
-window.addEventListener('scroll', () => {
-  const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
-  if (scrollBar) scrollBar.style.width = pct + '%';
-  const header = document.getElementById('header');
-  if (header) header.classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
+  <!-- Floating WhatsApp -->
+  <a href="#" class="wa-float js-whatsapp" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.4 2 7.8L.3 31.6l8.1-2.1c2.3 1.2 4.9 1.9 7.6 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4Zm0 28.5c-2.5 0-4.8-.7-6.8-1.8l-.5-.3-4.8 1.3 1.3-4.7-.3-.5a12.8 12.8 0 0 1-2-6.9C2.9 8.8 8.8 2.9 16 2.9S29.1 8.8 29.1 16 23.2 28.9 16 28.9Zm7.2-9.6c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8.2-.2.4-.4.5-.7.2-.2.2-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.7-.9-.7h-.7c-.2 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4 6.3 5.6.9.4 1.6.6 2.1.8.9.3 1.7.2 2.3.1.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.3-.7-.5Z"/></svg>
+  </a>
 
-/* ── Reveal on scroll ── */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.05 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-setTimeout(() => {
-  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-}, 1000);
-
-/* ── FAQ accordion ── */
-document.querySelectorAll('.faq__item').forEach(item => {
-  const btn = item.querySelector('.faq__question');
-  const answer = item.querySelector('.faq__answer');
-  if (!btn || !answer) return;
-  btn.addEventListener('click', () => {
-    const expanded = btn.getAttribute('aria-expanded') === 'true';
-    document.querySelectorAll('.faq__item').forEach(other => {
-      other.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
-      other.querySelector('.faq__answer').hidden = true;
-    });
-    btn.setAttribute('aria-expanded', String(!expanded));
-    answer.hidden = expanded;
-  });
-});
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
