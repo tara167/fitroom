@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quote Card — Justin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0a0a0f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    .card {
+      width: 1080px;
+      height: 1080px;
+      background: linear-gradient(160deg, #12101a 0%, #0d0b14 50%, #0a0810 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 110px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle corner ornaments */
+    .card::before, .card::after {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-color: rgba(201,169,110,0.15);
+      border-style: solid;
+    }
+    .card::before {
+      top: 40px; left: 40px;
+      border-width: 1px 0 0 1px;
+    }
+    .card::after {
+      bottom: 40px; right: 40px;
+      border-width: 0 1px 1px 0;
+    }
+
+    .logo {
+      margin-bottom: 48px;
+      opacity: 0.7;
+    }
+
+    .logo img {
+      height: 48px;
+    }
+
+    .quote-mark {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 6rem;
+      color: #c9a96e;
+      opacity: 0.25;
+      line-height: 0.5;
+      margin-bottom: 32px;
+      align-self: flex-start;
+    }
+
+    blockquote {
+      font-size: 1.55rem;
+      font-weight: 300;
+      font-style: italic;
+      color: #faf6f0;
+      line-height: 1.85;
+      text-align: center;
+      opacity: 0.92;
+      margin-bottom: 48px;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: #c9a96e;
+      opacity: 0.4;
+      margin-bottom: 24px;
+    }
+
+    .attribution {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 4px;
+      color: #c9a96e;
+      opacity: 0.6;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <img src="assets/img/sacrada-logo.svg" alt="Sacrada" />
+    </div>
+    <div class="quote-mark">"</div>
+    <blockquote>
+      She's the rare person who feels like an old friend from the start — someone with genuinely good advice, as well as a gifted medium clearly tapped into something greater than ourselves. Every time, I leave significantly clearer than when I arrived. Give yourself the gift of a conversation with her.
+    </blockquote>
+    <div class="divider"></div>
+    <p class="attribution">— Justin</p>
+  </div>
+</body>
+</html>
