@@ -219,6 +219,16 @@ p{ margin:0 0 1em; }
 /* =========================================================
    PRICING
    ========================================================= */
+.promo{ display:flex; align-items:center; justify-content:space-between; gap:28px; flex-wrap:wrap; background:var(--lime); color:var(--ink); border-radius:3px; padding:clamp(32px,4vw,56px); margin-bottom:clamp(12px,1.4vw,20px); position:relative; overflow:hidden; }
+.promo::before{ content:""; position:absolute; inset:0; background:radial-gradient(110% 130% at 100% 0%, rgba(255,255,255,.28), transparent 55%); pointer-events:none; }
+.promo .founder__main{ position:relative; }
+.promo .founder__tag{ color:var(--ink); opacity:.7; }
+.promo h3{ font-size:clamp(2.2rem,4.5vw,3.8rem); letter-spacing:-.04em; margin-bottom:.3em; }
+.promo p{ color:var(--ink); opacity:.85; font-size:1.1rem; }
+.promo strong{ color:var(--ink); opacity:1; font-weight:700; }
+.promo .btn{ background:var(--ink); color:var(--paper); border-color:var(--ink); flex:none; position:relative; }
+.promo .btn::before{ background:var(--paper); }
+.promo .btn:hover{ color:var(--ink); }
 .founder{ display:flex; align-items:center; justify-content:space-between; gap:28px; flex-wrap:wrap; background:var(--ink); color:var(--paper); border-radius:3px; padding:clamp(26px,3.4vw,46px); margin-bottom:clamp(18px,2vw,30px); position:relative; overflow:hidden; }
 .founder::before{ content:""; position:absolute; inset:0; background:radial-gradient(120% 150% at 100% 0%, var(--lime-gl), transparent 52%); pointer-events:none; }
 .founder__main{ position:relative; max-width:62ch; }
