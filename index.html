@@ -36,8 +36,8 @@
     .experience__inner { max-width: 560px; margin: 0 auto; }
     .experience__heading { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 300; letter-spacing: -0.02em; margin-bottom: 0.6em; color: var(--cream); }
     .experience__tagline { font-size: 1.05rem; opacity: 0.7; margin-bottom: 3rem; line-height: 1.7; }
-    .experience__video { position: relative; width: 100%; max-width: 340px; margin: 0 auto 3rem; aspect-ratio: 9/16; background: rgba(255,255,255,0.04); border: 1px solid rgba(212,175,55,0.2); border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; }
-    .experience__video-moon { font-size: 2.4rem; opacity: 0.35; }
+    .experience__video { position: relative; width: 100%; max-width: 340px; margin: 0 auto 3rem; border: 1px solid rgba(212,175,55,0.18); border-radius: 14px; overflow: hidden; box-shadow: 0 8px 60px rgba(0,0,0,0.5), 0 0 40px rgba(212,175,55,0.06); }
+    .experience__video video { width: 100%; display: block; border-radius: 14px; }
     .experience__follow-heading { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 300; font-style: italic; color: var(--cream); opacity: 0.85; margin-bottom: 0.4em; }
     .experience__follow-sub { font-size: 0.95rem; opacity: 0.6; margin-bottom: 2rem; }
     .session__desc { font-size: 1.1rem; line-height: 1.75; opacity: 0.8; margin: 1.4rem 0 2rem; }
@@ -120,8 +120,16 @@
           <h2 class="experience__heading">Wondering what a reading feels like?</h2>
           <p class="experience__tagline">Take a moment. This message may be the one you needed today.</p>
 
-          <div class="experience__video" aria-label="Sample reading">
-            <span class="experience__video-moon" aria-hidden="true">☽</span>
+          <div class="experience__video">
+            <video
+              src="assets/video/reading.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="Tara doing an oracle card reading"
+            ></video>
           </div>
 
           <p class="experience__follow-heading">Want a little guidance each day?</p>
