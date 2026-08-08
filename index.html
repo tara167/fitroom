@@ -47,8 +47,8 @@
     .photo-moment { position: relative; width: 100%; overflow: hidden; }
     .photo-moment img { width: 100%; display: block; object-fit: cover; }
     .photo-moment::before, .photo-moment::after { content: ''; position: absolute; left: 0; right: 0; z-index: 1; pointer-events: none; }
-    .photo-moment::before { top: 0; height: 50%; background: linear-gradient(to bottom, #0f0a14, transparent); }
-    .photo-moment::after  { bottom: 0; height: 50%; background: linear-gradient(to top, #0f0a14, transparent); }
+    .photo-moment::before { top: 0; height: 35%; background: linear-gradient(to bottom, #0f0a14, transparent); }
+    .photo-moment::after  { bottom: 0; height: 30%; background: linear-gradient(to top, #0f0a14, transparent); }
 
     .photo-moment--flower img { height: 180px; object-position: center 35%; }
 
@@ -56,7 +56,7 @@
     .photo-moment--tree::before, .photo-moment--tree::after { display: none; }
     .photo-moment--tree img { height: 420px; object-position: center center; border-radius: 6px; filter: brightness(0.88); }
 
-    .photo-moment--sunset img { height: 400px; object-position: center 55%; filter: brightness(0.82); }
+    .photo-moment--sunset img { height: 400px; object-position: center 75%; filter: brightness(0.92); }
 
     @media (max-width: 600px) {
       .photo-moment--tree img { height: 300px; }
@@ -158,11 +158,6 @@
         </div>
       </div>
     </section>
-
-    <!-- flower: atmospheric transition -->
-    <div class="photo-moment photo-moment--flower" aria-hidden="true">
-      <img src="assets/image-1786208357142.jpg" alt="" />
-    </div>
 
     <!-- ============ WHAT TO EXPECT ============ -->
     <section class="expect section" id="expect">
