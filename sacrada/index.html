@@ -29,6 +29,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .video-glimpse { text-align: center; padding-top: 0; }
+    .video-glimpse__inner { max-width: 360px; margin: 0 auto; }
+    .video-glimpse__frame {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(212,175,55,0.18);
+      box-shadow: 0 8px 60px rgba(0,0,0,0.5), 0 0 40px rgba(212,175,55,0.06);
+    }
+    .video-glimpse__video {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+    }
+    .video-glimpse__caption {
+      margin-top: 1.2rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      opacity: 0.35;
+      color: var(--cream);
+      text-transform: uppercase;
+    }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -96,6 +121,27 @@
         <div class="about__visual reveal">
           <div class="about__frame"></div>
           <img src="assets/IMG_7320.jpeg?v=2" alt="Crystal wings and oracle cards" class="about__img" style="object-position:center center;" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VIDEO GLIMPSE ============ -->
+    <section class="section video-glimpse" id="glimpse">
+      <div class="container">
+        <div class="video-glimpse__inner reveal">
+          <div class="video-glimpse__frame">
+            <video
+              src="assets/video/reading.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              class="video-glimpse__video"
+              aria-label="Tara doing an oracle card reading"
+            ></video>
+          </div>
+          <p class="video-glimpse__caption">An actual reading · Sacrada</p>
         </div>
       </div>
     </section>
