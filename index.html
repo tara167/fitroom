@@ -215,6 +215,29 @@
 
     <hr class="prism" aria-hidden="true"/>
 
+    <!-- ============ CHECK-IN ============ -->
+    <section class="checkin section" id="checkin">
+      <canvas id="checkinGeo" class="bg-geo" width="480" height="480" style="left:50%;top:50%;transform:translate(-50%,-50%);opacity:.045" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="checkin__inner reveal">
+          <div class="section-label mono" style="justify-content:center;">A gentle landing</div>
+          <h2 class="checkin__title">Sacrada Check-In</h2>
+          <div class="checkin__price-row">
+            <span class="checkin__price">$49</span>
+            <span class="checkin__per">25 min · private</span>
+          </div>
+          <p class="checkin__lead">Sometimes you don't need a reading.<br/>You just need someone.</p>
+          <p class="checkin__desc">A Sacrada Check-In is a private 25-minute space — to talk, be heard, and land somewhere soft. No crisis required. No agenda needed.</p>
+          <p class="checkin__desc">You might be navigating something quietly. Processing a transition. Sitting with grief. Facing a decision alone. Or simply needing a warm, grounded presence to think out loud with.</p>
+          <p class="checkin__desc">Tara meets you where you are. Depending on what naturally arises, the session may include conversation, intuitive guidance, an oracle card, grounding, or breathwork — or it may simply be the experience of being deeply listened to.</p>
+          <p class="checkin__note">You don't have to know exactly what you need.<br/>You can just come as you are.</p>
+          <a href="/book.html" class="btn btn--gold js-book">Book a Check-In — $49</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="prism" aria-hidden="true"/>
+
     <!-- ============ THE SESSION ============ -->
     <section class="session section" id="session">
       <canvas id="sessionGeo" class="bg-geo" width="480" height="700" style="left:-60px;top:50%;transform:translateY(-50%);opacity:.09" aria-hidden="true"></canvas>
@@ -566,6 +589,16 @@ if (vid && btn) {
     const ctx=c.getContext('2d');
     flowerOfLife(ctx,290,290,78,0.9,true);
     lightBurst(ctx,290,290,125,1.1);
+  })();
+
+  // CHECK-IN — Flower of Life, soft and centered
+  (function(){
+    const c=document.getElementById('checkinGeo');if(!c)return;
+    const ctx=c.getContext('2d');
+    lightBurst(ctx,240,240,200,1.0);
+    flowerOfLife(ctx,240,240,72,0.85,true);
+    glowArc(ctx,240,240,168,C.gold,.14,.55);
+    glowArc(ctx,240,240,182,C.violet,.1,.45);
   })();
 
   // SESSION — Tree of Life (peeking in from left edge)

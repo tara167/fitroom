@@ -324,6 +324,37 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
   .oracle__card { display: none; }
 }
 
+/* ── Check-In ── */
+.checkin {
+  background: var(--ivory2);
+  position: relative; overflow: hidden;
+  text-align: center;
+}
+.checkin__inner {
+  max-width: 620px; margin: 0 auto;
+  position: relative; z-index: 1;
+}
+.checkin__title { margin-bottom: .75rem; }
+.checkin__price-row {
+  display: flex; align-items: baseline; justify-content: center;
+  gap: 1rem; margin-bottom: 2rem;
+}
+.checkin__price {
+  font-family: var(--font-mono); font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--gold); letter-spacing: .05em;
+}
+.checkin__per { font-family: var(--font-mono); font-size: .65rem; letter-spacing: .12em; color: var(--text3); text-transform: uppercase; }
+.checkin__lead {
+  font-family: var(--font-accent); font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-style: italic; color: #8818f0; margin-bottom: 1.8rem;
+}
+.checkin__desc { color: var(--text2); font-size: 1.05rem; line-height: 1.8; margin: 0 auto 1.2rem; max-width: 540px; }
+.checkin__note {
+  font-family: var(--font-accent); font-style: italic;
+  font-size: 1.15rem; color: var(--text);
+  margin: 2rem auto 2.5rem; max-width: 420px;
+}
+
 /* ── Session / Offering ── */
 .session {
   background: var(--ivory2);
