@@ -116,7 +116,7 @@
 
     <!-- ============ EXPERIENCE SACRADA ============ -->
     <section class="section experience" id="experience">
-      <canvas id="expGeo" class="bg-geo" width="480" height="480" style="left:50%;top:50%;transform:translate(-50%,-50%);opacity:.055" aria-hidden="true"></canvas>
+      <canvas id="expGeo" class="bg-geo" width="480" height="480" style="left:50%;top:50%;transform:translate(-50%,-50%);opacity:.04" aria-hidden="true"></canvas>
       <div class="container">
         <div class="experience__inner reveal">
           <p class="section-label mono" style="margin-bottom:1.2rem;">Experience Sacrada</p>
@@ -314,7 +314,7 @@
 
     <!-- ============ TESTIMONIAL ============ -->
     <section class="section" id="testimonial" style="position:relative;overflow:hidden;background:var(--ivory2)">
-      <canvas id="testiGeo" class="bg-geo" width="560" height="460" style="left:50%;top:50%;transform:translate(-50%,-50%);opacity:.08" aria-hidden="true"></canvas>
+      <canvas id="testiGeo" class="bg-geo" width="320" height="320" style="right:0;top:0;opacity:.04" aria-hidden="true"></canvas>
       <div class="container">
         <div class="reveal" style="max-width: 720px; margin: 0 auto; text-align: center;">
           <div class="section-label mono" style="margin-bottom: 2rem;">A client’s words</div>
@@ -350,7 +350,7 @@
 
     <!-- ============ CTA ============ -->
     <section class="cta-banner section">
-      <canvas id="ctaGeo" class="bg-geo" width="700" height="700" style="left:50%;top:50%;transform:translate(-50%,-50%);opacity:.85" aria-hidden="true"></canvas>
+      <canvas id="ctaGeo" class="bg-geo" width="700" height="700" style="left:50%;top:50%;transform:translate(-50%,-50%);opacity:.6" aria-hidden="true"></canvas>
       <div class="container cta-banner__inner reveal">
         <h2>A message may be<br/>waiting for you.</h2>
         <p>Sacred space is open. Come as you are.</p>
@@ -568,25 +568,23 @@ if (vid && btn) {
     lightBurst(ctx,290,290,125,1.1);
   })();
 
-  // SESSION — Tree of Life
+  // SESSION — Tree of Life (peeking in from left edge)
   (function(){
     const c=document.getElementById('sessionGeo');if(!c)return;
     const ctx=c.getContext('2d');
-    lightBurst(ctx,240,350,270,.9);
-    treeOfLife(ctx,240,350,36,0.9);
-    glowArc(ctx,240,350,158,C.emerald,.22,.7);
-    glowArc(ctx,240,350,173,C.gold,.14,.55);
+    lightBurst(ctx,60,350,220,.8);
+    treeOfLife(ctx,60,350,36,0.85);
+    glowArc(ctx,60,350,148,C.emerald,.18,.6);
+    glowArc(ctx,60,350,162,C.gold,.1,.45);
   })();
 
-  // TESTIMONIAL — gold star mandala
+  // TESTIMONIAL — corner rings (top-right, partially clipped)
   (function(){
     const c=document.getElementById('testiGeo');if(!c)return;
-    const ctx=c.getContext('2d'),cx=280,cy=230;
-    lightBurst(ctx,cx,cy,240,1.2);
-    [110,85,62,42,24].forEach(function(r,i){glowArc(ctx,cx,cy,r,SP[i%SP.length],.55,.85)});
-    for(let i=0;i<6;i++){const a=i*Math.PI/3;glowLine(ctx,cx,cy,cx+130*Math.cos(a),cy+130*Math.sin(a),SP[i],.5,.75)}
-    for(let i=0;i<12;i++){const a=i*Math.PI/6;glowLine(ctx,cx+72*Math.cos(a),cy+72*Math.sin(a),cx+108*Math.cos(a),cy+108*Math.sin(a),SP[i%7],.4,.6)}
-    glowFill(ctx,cx,cy,10,C.gold,.9);glowFill(ctx,cx,cy,4,'#fff',1.0);
+    const ctx=c.getContext('2d'),cx=300,cy=20;
+    lightBurst(ctx,cx,cy,160,.5);
+    [130,95,65,38].forEach(function(r,i){glowArc(ctx,cx,cy,r,SP[i%SP.length],.38,.6)});
+    glowFill(ctx,cx,cy,8,C.gold,.5);
   })();
 
   // CTA — Metatron + Tree of Life + light rays
