@@ -15,7 +15,9 @@
   --gold-lt: #e8c030;
   --cream:   #1c1238;   /* backward compat — maps to text */
   --white:   #ffffff;
-  --font-body: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-accent: 'Cormorant Garamond', Georgia, serif;
   --font-mono: 'Space Mono', monospace;
   --ease: cubic-bezier(.4,0,.2,1);
 }
@@ -32,12 +34,12 @@ body {
 }
 
 /* ── Typography ── */
-h1,h2,h3 { font-weight: 300; letter-spacing: .02em; line-height: 1.15; }
+h1,h2,h3 { font-family: var(--font-display); font-weight: 400; letter-spacing: .04em; line-height: 1.1; }
 h1 { font-size: clamp(3rem, 8vw, 7rem); }
-h2 { font-size: clamp(2rem, 5vw, 3.8rem); }
-h3 { font-size: clamp(1.3rem, 3vw, 2rem); }
+h2 { font-size: clamp(1.9rem, 4.5vw, 3.5rem); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.8rem); }
 
-.mono { font-family: var(--font-mono); font-size: .7em; letter-spacing: .12em; text-transform: uppercase; }
+.mono { font-family: var(--font-mono); font-size: .7em; letter-spacing: .1em; text-transform: uppercase; }
 .gold { color: var(--gold); }
 
 /* ── Layout ── */
@@ -72,12 +74,11 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
   display: flex; align-items: center;
 }
 .logo__img {
-  height: 48px; width: auto; display: block;
-  filter: brightness(0) opacity(.82);
+  height: 44px; width: auto; display: block;
 }
 .header__cta {
-  font-family: var(--font-mono); font-size: .7rem;
-  letter-spacing: .15em; text-transform: uppercase;
+  font-family: var(--font-mono); font-size: .68rem;
+  letter-spacing: .09em; text-transform: uppercase;
   color: var(--text); text-decoration: none;
   border: 1px solid rgba(28,18,56,.3); padding: .55rem 1.4rem;
   transition: background .3s, color .3s, border-color .3s;
@@ -146,15 +147,18 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
 }
 .hero__title {
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, var(--text) 0%, #8818f0 50%, var(--gold) 100%);
+  background: linear-gradient(135deg, var(--text) 0%, #8818f0 45%, var(--gold) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 0 48px rgba(136,24,240,.14)) drop-shadow(0 0 24px rgba(200,160,32,.1));
 }
 .hero__tagline {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-family: var(--font-accent);
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  font-style: italic;
   color: var(--text2);
   margin-bottom: 3rem;
-  font-style: italic;
+  line-height: 1.6;
 }
 .hero__divider {
   width: 60px; height: 2px;
@@ -168,7 +172,7 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
 .btn {
   display: inline-block; text-decoration: none;
   font-family: var(--font-mono); font-size: .72rem;
-  letter-spacing: .15em; text-transform: uppercase;
+  letter-spacing: .08em; text-transform: uppercase;
   padding: .9rem 2.2rem; transition: all .3s var(--ease);
 }
 .btn--gold { background: var(--gold); color: var(--ivory); }
@@ -197,6 +201,7 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
   position: relative; z-index: 1;
 }
 .about__quote {
+  font-family: var(--font-accent);
   font-size: clamp(1.4rem, 3vw, 2.2rem);
   font-style: italic;
   color: #8818f0;
@@ -228,8 +233,8 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
 /* ── Experience Sacrada ── */
 .experience { text-align: center; position: relative; overflow: hidden; background: var(--ivory2); }
 .experience__inner { max-width: 560px; margin: 0 auto; position: relative; z-index: 1; }
-.experience__heading { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 300; letter-spacing: -0.02em; margin-bottom: 0.6em; color: var(--text); }
-.experience__tagline { font-size: 1.05rem; color: var(--text2); margin-bottom: 3rem; line-height: 1.7; }
+.experience__heading { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; letter-spacing: .02em; margin-bottom: 0.6em; color: var(--text); }
+.experience__tagline { font-family: var(--font-accent); font-style: italic; font-size: 1.15rem; color: var(--text2); margin-bottom: 3rem; line-height: 1.7; }
 .experience__video {
   position: relative; width: 100%; max-width: 340px; margin: 0 auto 3rem;
   border: 1px solid rgba(200,160,32,.25); border-radius: 14px; overflow: hidden;
@@ -356,7 +361,7 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
 }
 .cta-banner__inner { position: relative; z-index: 1; }
 .cta-banner h2 { margin-bottom: 1rem; }
-.cta-banner p { font-style: italic; font-size: 1.2rem; color: var(--text2); margin-bottom: 3rem; }
+.cta-banner p { font-family: var(--font-accent); font-style: italic; font-size: 1.3rem; color: var(--text2); margin-bottom: 3rem; }
 
 /* ── FAQ ── */
 .faq { position: relative; overflow: hidden; }
