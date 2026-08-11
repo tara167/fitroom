@@ -5,74 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book The Sacrada Session · Sacrada</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <meta name="theme-color" content="#1a1422" />
+  <meta name="theme-color" content="#faf4e8" />
   <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lora:ital,wght@0,400;1,400&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <style>
+    /* ── Book page: light, luminous, matches main Sacrada direction ── */
     .book-page {
       min-height: 100svh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 120px 5vw 80px;
+      background: var(--ivory);
     }
     .book-card {
       max-width: 680px;
       width: 100%;
-      background: rgba(42, 34, 56, 0.45);
-      border: 1px solid rgba(201, 169, 110, 0.15);
+      background: var(--ivory);                       /* no dark overlay */
+      border: 1px solid rgba(200,160,32,.28);
       border-radius: 4px;
       padding: clamp(2rem, 6vw, 4rem);
+      box-shadow: 0 8px 60px rgba(136,24,240,.06), 0 2px 20px rgba(200,160,32,.07);
     }
     .book-card .section-label {
       display: block;
       margin-bottom: 1.5rem;
     }
     .book-card h1 {
+      font-family: var(--font-display);
       font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 300;
+      font-weight: 400;
       margin-bottom: 0.5rem;
-      color: var(--cream);
+      color: var(--text);
     }
     .book-price {
-      font-family: 'Space Mono', monospace;
+      font-family: var(--font-mono);
       font-size: 2rem;
       color: var(--gold);
       margin-bottom: 2.5rem;
       display: block;
     }
+    /* ── Disclaimer box: pale cream card, gold border, dark readable text ── */
     .waiver {
-      background: rgba(14, 12, 18, 0.6);
-      border: 1px solid rgba(201, 169, 110, 0.1);
+      background: #fdf8ee;                            /* very pale cream, no dark overlay */
+      border: 1px solid rgba(200,160,32,.32);
       border-radius: 4px;
       padding: 1.5rem 2rem;
       margin-bottom: 2rem;
     }
     .waiver h2 {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
       letter-spacing: 3px;
       color: var(--gold);
-      opacity: 0.7;
       margin-bottom: 1.2rem;
     }
     .waiver p, .waiver li {
-      font-size: 0.9rem;
-      color: var(--cream);
-      opacity: 0.65;
-      line-height: 1.7;
+      font-size: 0.92rem;
+      color: var(--text2);                            /* full-strength dark purple, not faded */
+      line-height: 1.75;
       margin-bottom: 0.6rem;
     }
     .waiver ul {
       padding-left: 1.2rem;
       margin-bottom: 0;
     }
-    .waiver li {
-      margin-bottom: 0.4rem;
-    }
+    .waiver li { margin-bottom: 0.4rem; }
+    /* ── Checkbox row: clearly readable ── */
     .agree-row {
       display: flex;
       align-items: flex-start;
@@ -89,10 +91,9 @@
       cursor: pointer;
     }
     .agree-row label {
-      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-family: var(--font-accent);
       font-size: 1.1rem;
-      color: var(--cream);
-      opacity: 0.8;
+      color: var(--text);                             /* full dark contrast, no opacity fade */
       cursor: pointer;
       line-height: 1.5;
     }
@@ -100,34 +101,56 @@
       opacity: 0.35;
       pointer-events: none;
     }
-    .book-steps {
-      margin-bottom: 2.5rem;
-    }
+    /* ── Steps ── */
+    .book-steps { margin-bottom: 2.5rem; }
     .book-steps p {
-      font-size: 0.9rem;
-      color: var(--cream);
-      opacity: 0.55;
-      margin-bottom: 0.4rem;
-      font-family: 'Space Mono', monospace;
+      font-family: var(--font-mono);
       font-size: 0.72rem;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
+      color: var(--text2);
+      margin-bottom: 0.4rem;
     }
+    /* ── Stripe button: luminous gold-to-violet gradient, white text ── */
+    .book-card .btn--gold {
+      background: linear-gradient(135deg, #c8a020 0%, #8818f0 100%);
+      color: #fff;
+      letter-spacing: .07em;
+      text-shadow: 0 1px 3px rgba(0,0,0,.22);
+      border: none;
+    }
+    .book-card .btn--gold:hover {
+      filter: brightness(1.1);
+      background: linear-gradient(135deg, #e0b830 0%, #9930ff 100%);
+    }
+    /* ── PayPal / Calendly outline buttons ── */
+    .book-card .btn--outline {
+      border: 1px solid rgba(200,160,32,.45);
+      color: var(--text);
+      background: transparent;
+    }
+    .book-card .btn--outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(200,160,32,.05);
+    }
+    /* ── Divider ── */
     .divider-line {
       border: none;
-      border-top: 1px solid rgba(201,169,110,0.12);
+      border-top: 1px solid rgba(200,160,32,.2);
       margin: 2rem 0;
     }
+    /* ── Back link ── */
     .back-link {
       display: inline-block;
       margin-top: 1.5rem;
-      font-family: 'Space Mono', monospace;
+      font-family: var(--font-mono);
       font-size: 0.72rem;
       letter-spacing: 2px;
       color: var(--gold);
-      opacity: 0.45;
       text-decoration: none;
+      opacity: .65;
     }
-    .back-link:hover { opacity: 0.7; }
+    .back-link:hover { opacity: 1; }
   </style>
 </head>
 <body>
