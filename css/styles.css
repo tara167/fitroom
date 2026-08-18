@@ -125,10 +125,9 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
 }
 .hero__bg {
   position: absolute; inset: 0; z-index: 0;
-  background: radial-gradient(ellipse at 65% 45%,
-    rgba(200,160,32,.06) 0%,
-    rgba(136,24,240,.04) 42%,
-    transparent 70%);
+  background:
+    radial-gradient(ellipse at 65% 45%, rgba(200,160,32,.07) 0%, rgba(136,24,240,.04) 40%, transparent 68%),
+    radial-gradient(ellipse at 20% 80%, rgba(0,204,88,.03) 0%, transparent 50%);
 }
 .hero__geo {
   position: absolute; right: 0; top: 0; bottom: 0; width: 55%;
@@ -175,8 +174,14 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
   letter-spacing: .08em; text-transform: uppercase;
   padding: .9rem 2.2rem; transition: all .3s var(--ease);
 }
-.btn--gold { background: var(--gold); color: var(--ivory); }
-.btn--gold:hover { background: #a07810; }
+.btn--gold {
+  background: linear-gradient(135deg, #d4aa28 0%, #c8a020 55%, #b89018 100%);
+  color: var(--ivory);
+}
+.btn--gold:hover {
+  background: linear-gradient(135deg, #e0c038 0%, #d4aa28 55%, #c8a020 100%);
+  filter: brightness(1.06);
+}
 .btn--outline { border: 1px solid rgba(28,18,56,.3); color: var(--text); }
 .btn--outline:hover { border-color: var(--gold); color: var(--gold); background: rgba(200,160,32,.06); }
 
@@ -188,7 +193,9 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
 }
 .section-label::after {
   content: ''; flex: 1; max-width: 60px;
-  height: 1px; background: var(--gold); opacity: .5;
+  height: 1px;
+  background: linear-gradient(to right, var(--gold), #8818f0);
+  opacity: .55;
 }
 
 /* ── About ── */
@@ -206,9 +213,15 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
   font-style: italic;
   color: #8818f0;
   line-height: 1.5;
-  border-left: 2px solid var(--gold);
+  border-left: none;
   padding-left: 2rem;
   margin-bottom: 2rem;
+  position: relative;
+}
+.about__quote::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(to bottom, #c8a020, #8818f0);
 }
 .about__copy p {
   color: var(--text2);
@@ -277,8 +290,8 @@ section { padding: clamp(80px, 12vw, 140px) 0; }
 /* ── Oracle Pull ── */
 .oracle {
   position: relative; overflow: hidden;
-  border-top: 1px solid rgba(200,160,32,.2);
-  border-bottom: 1px solid rgba(200,160,32,.2);
+  border-top: 1px solid rgba(200,160,32,.3);
+  border-bottom: 1px solid rgba(200,160,32,.3);
   background: var(--ivory);
 }
 .oracle__inner {
@@ -483,6 +496,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .pillars__grid, .pillars__grid--four { grid-template-columns: 1fr; gap: 2px; }
   .about__visual { order: -1; }
   .hero__geo { display: none; }
+}
+@media (max-width: 480px) {
+  .logo__img { height: 36px; }
 }
 @media (max-width: 390px) {
   body { overflow-x: hidden; }
