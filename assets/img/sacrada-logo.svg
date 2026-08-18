@@ -1,88 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 130">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#2a1f3d"/>
-      <stop offset="100%" stop-color="#1a1228"/>
+    <!-- Filters -->
+    <filter id="gs" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="gt" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Wing gradient: gold core → violet outer -->
+    <radialGradient id="wg" cx="65" cy="72" r="37" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#ffd040"/>
+      <stop offset="25%"  stop-color="#c8a020"/>
+      <stop offset="65%"  stop-color="#8818f0"/>
+      <stop offset="100%" stop-color="#4d08b8"/>
     </radialGradient>
-    <radialGradient id="wing-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#c9a96e" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
+
+    <!-- Left wing tip: emerald -->
+    <radialGradient id="lt" cx="38" cy="42" r="22" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#00e860" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#00cc58" stop-opacity="0"/>
     </radialGradient>
+
+    <!-- Right wing tip: turquoise/magenta -->
+    <radialGradient id="rt" cx="92" cy="42" r="22" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#00d8f8" stop-opacity="0.5"/>
+      <stop offset="55%"  stop-color="#e010b0" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#e010b0" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Central aura -->
+    <radialGradient id="aura" cx="65" cy="68" r="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#ffd040" stop-opacity="0.28"/>
+      <stop offset="60%"  stop-color="#8818f0" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#8818f0" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Halo: prismatic -->
+    <linearGradient id="hg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#8818f0"/>
+      <stop offset="22%"  stop-color="#00c8e8"/>
+      <stop offset="45%"  stop-color="#ffd040"/>
+      <stop offset="68%"  stop-color="#00cc58"/>
+      <stop offset="88%"  stop-color="#e010b0"/>
+      <stop offset="100%" stop-color="#8818f0"/>
+    </linearGradient>
+
+    <!-- Divider: prismatic -->
+    <linearGradient id="dg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#8818f0" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#c8a020" stop-opacity="0.5"/>
+      <stop offset="70%"  stop-color="#00cc58" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e010b0" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Wing paths as reusable clip-friendly shapes -->
+    <!-- All wing coords are scaled to ~0.42× from the 400×400 original,
+         then translated so the wing center sits at x=65, y=65 -->
+    <!-- Scale factor: 0.42; translate: tx = 65 - 200*0.42 = 65-84 = -19; ty = 65 - 185*0.42 = 65-77.7 = -12.7 -->
   </defs>
 
-  <!-- Background -->
-  <rect width="400" height="400" fill="url(#bg)" rx="0"/>
+  <!-- ── Symbol: wings at 0.42× scale, centred at 65,65 ── -->
+  <g transform="translate(-19,-12.7) scale(0.42)">
 
-  <!-- Concentric orbit rings -->
-  <circle cx="200" cy="185" r="60"  fill="none" stroke="#c9a96e" stroke-opacity="0.10" stroke-width="0.8"/>
-  <circle cx="200" cy="185" r="85"  fill="none" stroke="#c9a96e" stroke-opacity="0.09" stroke-width="0.7"/>
-  <circle cx="200" cy="185" r="110" fill="none" stroke="#c9a96e" stroke-opacity="0.07" stroke-width="0.6"/>
-  <circle cx="200" cy="185" r="138" fill="none" stroke="#c9a96e" stroke-opacity="0.05" stroke-width="0.5"/>
-  <circle cx="200" cy="185" r="166" fill="none" stroke="#c9a96e" stroke-opacity="0.04" stroke-width="0.5"/>
+    <!-- Orbit rings (jewel-toned) -->
+    <circle cx="200" cy="185" r="60"  fill="none" stroke="#8818f0" stroke-opacity=".13" stroke-width="2"/>
+    <circle cx="200" cy="185" r="85"  fill="none" stroke="#00c8e8" stroke-opacity=".11" stroke-width="1.8"/>
+    <circle cx="200" cy="185" r="110" fill="none" stroke="#00cc58" stroke-opacity=".09" stroke-width="1.5"/>
 
-  <!-- Ambient glow behind wing -->
-  <ellipse cx="200" cy="175" rx="90" ry="90" fill="url(#wing-glow)"/>
+    <!-- Central aura -->
+    <ellipse cx="200" cy="175" rx="68" ry="68" fill="url(#aura)"/>
 
-  <!-- Angel Wing (left) -->
-  <g fill="#c9a96e" opacity="0.92">
-    <!-- Left wing -->
-    <path d="
-      M 200 230
-      C 185 210, 148 195, 140 165
-      C 135 145, 148 128, 162 122
-      C 152 138, 155 155, 168 168
-      C 158 150, 162 130, 175 122
-      C 168 138, 170 158, 182 170
-      C 176 150, 180 132, 192 125
-      C 188 142, 190 162, 200 172
-      Z
-    " opacity="0.85"/>
-    <!-- Right wing (mirrored) -->
-    <path d="
-      M 200 230
-      C 215 210, 252 195, 260 165
-      C 265 145, 252 128, 238 122
-      C 248 138, 245 155, 232 168
-      C 242 150, 238 130, 225 122
-      C 232 138, 230 158, 218 170
-      C 224 150, 220 132, 208 125
-      C 212 142, 210 162, 200 172
-      Z
-    " opacity="0.85"/>
-    <!-- Center body / base of wings -->
-    <ellipse cx="200" cy="215" rx="7" ry="18" opacity="0.6"/>
-    <!-- Small halo ring above wings -->
-    <ellipse cx="200" cy="116" rx="18" ry="5" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-opacity="0.7"/>
+    <!-- Wings — bloom pass -->
+    <g opacity=".45" filter="url(#gs)">
+      <path d="M200 230 C185 210,148 195,140 165 C135 145,148 128,162 122 C152 138,155 155,168 168 C158 150,162 130,175 122 C168 138,170 158,182 170 C176 150,180 132,192 125 C188 142,190 162,200 172Z" fill="url(#wg)"/>
+      <path d="M200 230 C215 210,252 195,260 165 C265 145,252 128,238 122 C248 138,245 155,232 168 C242 150,238 130,225 122 C232 138,230 158,218 170 C224 150,220 132,208 125 C212 142,210 162,200 172Z" fill="url(#wg)"/>
+    </g>
+
+    <!-- Wings — crisp -->
+    <path d="M200 230 C185 210,148 195,140 165 C135 145,148 128,162 122 C152 138,155 155,168 168 C158 150,162 130,175 122 C168 138,170 158,182 170 C176 150,180 132,192 125 C188 142,190 162,200 172Z" fill="url(#wg)" opacity=".9"/>
+    <path d="M200 230 C215 210,252 195,260 165 C265 145,252 128,238 122 C248 138,245 155,232 168 C242 150,238 130,225 122 C232 138,230 158,218 170 C224 150,220 132,208 125 C212 142,210 162,200 172Z" fill="url(#wg)" opacity=".9"/>
+
+    <!-- Tip colour overlays -->
+    <path d="M200 230 C185 210,148 195,140 165 C135 145,148 128,162 122 C152 138,155 155,168 168 C158 150,162 130,175 122 C168 138,170 158,182 170 C176 150,180 132,192 125 C188 142,190 162,200 172Z" fill="url(#lt)"/>
+    <path d="M200 230 C215 210,252 195,260 165 C265 145,252 128,238 122 C248 138,245 155,232 168 C242 150,238 130,225 122 C232 138,230 158,218 170 C224 150,220 132,208 125 C212 142,210 162,200 172Z" fill="url(#rt)"/>
+
+    <!-- Halo ring: prismatic -->
+    <ellipse cx="200" cy="116" rx="18" ry="5" fill="none" stroke="url(#hg)" stroke-width="4.5" stroke-opacity=".88" filter="url(#gt)"/>
+
+    <!-- Body stem -->
+    <ellipse cx="200" cy="216" rx="6" ry="16" fill="url(#wg)" opacity=".5"/>
+
+    <!-- Centre gem -->
+    <circle cx="200" cy="173" r="8" fill="#ffd040" opacity=".92" filter="url(#gt)"/>
+
+    <!-- Tip sparks -->
+    <circle cx="152" cy="132" r="4" fill="#00e860" opacity=".7"/>
+    <circle cx="248" cy="132" r="4" fill="#00d8f8" opacity=".65"/>
+
   </g>
 
-  <!-- Small star accents -->
-  <text x="148" y="148" font-size="7" fill="#c9a96e" opacity="0.45" text-anchor="middle">✦</text>
-  <text x="252" y="148" font-size="7" fill="#c9a96e" opacity="0.45" text-anchor="middle">✦</text>
-  <text x="200" y="96"  font-size="5" fill="#c9a96e" opacity="0.35" text-anchor="middle">✦</text>
+  <!-- ── Vertical divider ── -->
+  <line x1="118" y1="22" x2="118" y2="108" stroke="url(#dg)" stroke-width="0.8"/>
 
-  <!-- Wordmark -->
+  <!-- ── Wordmark: SACRADA ── -->
+  <!-- Georgia used (system font — loads reliably when SVG is used as <img>) -->
   <text
-    x="200" y="282"
-    font-family="'Cormorant Garamond', 'Georgia', serif"
-    font-size="32"
-    font-weight="300"
-    letter-spacing="10"
-    fill="#c9a96e"
-    text-anchor="middle"
+    x="142" y="68"
+    font-family="Georgia,'Times New Roman',serif"
+    font-size="22"
+    font-weight="400"
+    letter-spacing="7"
+    fill="#1c1238"
+    fill-opacity=".88"
   >SACRADA</text>
 
-  <!-- Tagline -->
-  <text
-    x="200" y="306"
-    font-family="'Space Mono', monospace"
-    font-size="7"
-    letter-spacing="3.5"
-    fill="#c9a96e"
-    opacity="0.5"
-    text-anchor="middle"
-  >SACRED · BREATH · TRUTH</text>
+  <!-- ── Thin prismatic rule under wordmark ── -->
+  <line x1="142" y1="78" x2="450" y2="78" stroke="url(#hg)" stroke-width="0.7" stroke-opacity=".38"/>
 
-  <!-- Thin rule under wordmark -->
-  <line x1="140" y1="314" x2="260" y2="314" stroke="#c9a96e" stroke-opacity="0.2" stroke-width="0.5"/>
+  <!-- ── Tagline ── -->
+  <text
+    x="142" y="94"
+    font-family="'Courier New',Courier,monospace"
+    font-size="6"
+    letter-spacing="2.8"
+    fill="#c8a020"
+    fill-opacity=".52"
+  >SACRED · BREATH · TRUTH</text>
 
 </svg>
