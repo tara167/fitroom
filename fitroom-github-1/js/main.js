@@ -116,4 +116,18 @@ const CONFIG = {
         });
     });
   }
+  /* --- How to Book tabs --- */
+  const tabBtns = document.querySelectorAll(".htb__tab");
+  const tabPanels = document.querySelectorAll(".htb__panel");
+  tabBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      tabBtns.forEach((b) => { b.classList.remove("htb__tab--active"); b.setAttribute("aria-selected","false"); });
+      tabPanels.forEach((p) => { p.classList.remove("htb__panel--active"); p.hidden = true; });
+      btn.classList.add("htb__tab--active");
+      btn.setAttribute("aria-selected","true");
+      const target = document.getElementById(btn.getAttribute("aria-controls"));
+      if (target) { target.classList.add("htb__panel--active"); target.hidden = false; }
+    });
+  });
+
 })();
