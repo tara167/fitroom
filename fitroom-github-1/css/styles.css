@@ -6,18 +6,18 @@
    ========================================================= */
 
 :root{
-  --paper:   #F3F4F0;
-  --white:   #FFFFFF;
-  --ink:     #0C0D0B;
-  --ink-2:   #54574D;
-  --ink-3:   #71746A;   /* darkened for legibility (AA on paper) */
-  --hair:    #E2E3DC;
-  --hair-2:  #D4D5CC;
-  --black:   #0B0C0A;
-  --black-2: #16180F;
-  --lime:    #8CC63F;
-  --lime-dk: #55801A;   /* accent text — AA on light */
-  --lime-gl: rgba(140,198,63,.16);
+  --paper:   #F7F3EC;
+  --white:   #F7F3EC;
+  --ink:     #4A4438;
+  --ink-2:   #6B6358;
+  --ink-3:   #8A8278;
+  --hair:    #E8E2D8;
+  --hair-2:  #DDD7CC;
+  --black:   #3A3028;
+  --black-2: #2E2620;
+  --lime:    #7C8C5E;
+  --lime-dk: #5A6B3E;
+  --lime-gl: rgba(124,140,94,.14);
 
   --maxw: 1320px;
   --pad: clamp(20px, 4.5vw, 72px);
@@ -44,7 +44,7 @@ a{ color:inherit; text-decoration:none; }
 *:focus-visible{ outline:2px solid var(--ink); outline-offset:3px; border-radius:1px; }
 .standard *:focus-visible,.site-footer *:focus-visible,.founder *:focus-visible,
 .price-card--feature *:focus-visible,.loc--active *:focus-visible{ outline-color:var(--paper); }
-h1,h2,h3{ margin:0; font-weight:600; line-height:1; letter-spacing:-.03em; }
+h1,h2,h3{ margin:0; font-weight:400; line-height:1; letter-spacing:-.02em; }
 p{ margin:0 0 1em; }
 .hidden{ display:none !important; }
 
@@ -74,7 +74,7 @@ p{ margin:0 0 1em; }
   display:inline-flex; align-items:center; justify-content:center; gap:.6em;
   font-family:var(--m); font-weight:400; font-size:.74rem; letter-spacing:.08em; text-transform:uppercase;
   padding:1.05em 1.9em; background:var(--bg); color:var(--fg);
-  border:1px solid var(--bg); border-radius:2px; cursor:pointer;
+  border:1px solid var(--bg); border-radius:24px; cursor:pointer;
   position:relative; overflow:hidden; transition:color .4s var(--ease), border-color .4s var(--ease);
 }
 .btn::before{ content:""; position:absolute; inset:0; background:var(--lime); transform:translateY(101%); transition:transform .45s var(--ease); z-index:0; }
@@ -131,7 +131,7 @@ p{ margin:0 0 1em; }
    ========================================================= */
 .hero{ padding-top:clamp(120px,15vw,180px); padding-bottom:clamp(40px,6vw,72px); }
 .hero__top{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px 24px; color:var(--ink-2); padding-bottom:clamp(20px,3vw,34px); border-bottom:1px solid var(--hair); }
-.hero__title{ font-size:clamp(4.2rem,18vw,15rem); font-weight:700; letter-spacing:-.05em; line-height:.86; padding-block:clamp(22px,3vw,40px); }
+.hero__title{ font-size:clamp(3.2rem,12vw,10rem); font-weight:400; letter-spacing:-.03em; line-height:.9; padding-block:clamp(22px,3vw,40px); }
 .hero__title em{ font-style:normal; color:var(--lime-dk); }
 .reveal-line{ display:block; overflow:hidden; }
 .reveal-line>span{ display:block; transform:translateY(105%); transition:transform 1s var(--ease-out); }
@@ -228,8 +228,8 @@ p{ margin:0 0 1em; }
 .founder strong{ color:var(--lime); font-weight:600; }
 .founder .btn{ position:relative; flex:none; }
 
-.price-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--hair); border:1px solid var(--hair); border-radius:3px; overflow:hidden; }
-.price-card{ background:var(--paper); padding:clamp(26px,2.6vw,42px) clamp(20px,2vw,34px); display:flex; flex-direction:column; transition:background .5s var(--ease); }
+.price-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.price-card{ background:var(--paper); padding:clamp(26px,2.6vw,42px) clamp(20px,2vw,34px); display:flex; flex-direction:column; border-radius:16px; border:1px solid var(--hair); transition:background .5s var(--ease); }
 .price-card:hover{ background:var(--white); }
 .price-card__head{ margin-bottom:1.6em; }
 .price-card__head .mono{ color:var(--lime-dk); display:block; margin-bottom:1em; }
@@ -242,7 +242,7 @@ p{ margin:0 0 1em; }
 .price-list__p s{ color:var(--ink-3); font-weight:400; font-size:.82em; margin-right:.35em; }
 .price-card__note{ color:var(--ink-3); font-size:.84rem; margin:0; }
 
-.price-card--feature{ background:var(--ink); color:var(--paper); }
+.price-card--feature{ background:var(--ink); color:var(--paper); border-color:var(--ink); }
 .price-card--feature:hover{ background:var(--black-2); }
 .price-card--feature .price-card__head .mono{ color:var(--lime); }
 .price-big{ font-size:clamp(2.8rem,5vw,3.6rem); font-weight:700; letter-spacing:-.04em; line-height:1; margin-bottom:1.1em; display:flex; align-items:baseline; gap:.45em; }
