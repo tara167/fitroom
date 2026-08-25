@@ -324,6 +324,9 @@ p{ margin:0 0 1em; }
 }
 .htb__steps p{ margin:0; color:var(--ink-2); line-height:1.65; }
 
+.about__founder-line{ color:var(--ink-3); margin-top:.5rem; }
+.visit__grid{ display:grid; grid-template-columns:1fr 1.4fr; gap:clamp(40px,6vw,90px); align-items:start; }
+.pricing__cta{ margin-top:3rem; text-align:center; }
 .contact{ background:var(--white); }
 .contact__grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:clamp(40px,6vw,90px); }
 .contact__lead{ color:var(--ink-2); max-width:40ch; margin-bottom:2.4em; font-size:1.05rem; }
@@ -389,6 +392,7 @@ p{ margin:0 0 1em; }
   .price-grid{ grid-template-columns:1fr; }
   .price-card--feature{ order:-1; }
   .contact__grid{ grid-template-columns:1fr; }
+  .visit__grid{ grid-template-columns:1fr; }
   .footer__inner{ grid-template-columns:1fr 1fr; }
   .footer__tag{ text-align:left; }
 }
