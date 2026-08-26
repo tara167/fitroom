@@ -52,7 +52,7 @@ p{ margin:0 0 1em; }
 .section{ padding-block:clamp(80px,12vw,170px); position:relative; }
 
 /* ---- mono micro-type ---- */
-.mono{ font-family:var(--m); font-weight:400; font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; }
+.mono{ font-family:var(--f); font-weight:400; font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; }
 .label{ display:flex; align-items:center; gap:.8em; color:var(--ink-2); margin:0 0 2.4em; font-size:.72rem; }
 .label span{ color:var(--lime-dk); }
 .label::after{ content:""; height:1px; flex:1; background:var(--hair-2); max-width:120px; }
@@ -110,7 +110,7 @@ p{ margin:0 0 1em; }
 .site-header.scrolled{ background:rgba(243,244,240,.78); backdrop-filter:saturate(160%) blur(16px); box-shadow:0 1px 0 var(--hair); padding-block:12px; }
 .header__inner{ display:flex; align-items:center; justify-content:space-between; gap:24px; }
 .nav{ display:flex; gap:30px; margin-inline-start:auto; }
-.nav a{ font-family:var(--m); font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-2); display:flex; align-items:baseline; gap:.4em; transition:color .3s; }
+.nav a{ font-family:var(--f); font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-2); display:flex; align-items:baseline; gap:.4em; transition:color .3s; }
 .nav a i{ font-style:normal; font-size:.6rem; color:var(--ink-3); }
 .nav a:hover{ color:var(--ink); }
 .nav a:hover i{ color:var(--lime-dk); }
@@ -123,7 +123,7 @@ p{ margin:0 0 1em; }
 .mobile-menu{ position:fixed; inset:0 0 auto 0; padding:92px var(--pad) 40px; background:var(--paper); display:flex; flex-direction:column; gap:2px; transform:translateY(-110%); transition:transform .55s var(--ease); z-index:90; box-shadow:0 30px 50px rgba(0,0,0,.07); }
 .mobile-menu.open{ transform:translateY(0); }
 .mobile-menu a{ font-size:1.9rem; font-weight:600; letter-spacing:-.03em; padding:14px 0; border-bottom:1px solid var(--hair); display:flex; align-items:baseline; gap:.5em; }
-.mobile-menu a i{ font-style:normal; font-family:var(--m); font-size:.8rem; color:var(--ink-3); }
+.mobile-menu a i{ font-style:normal; font-family:var(--f); font-size:.8rem; color:var(--ink-3); }
 .mobile-menu .btn{ margin-top:22px; align-self:flex-start; }
 
 /* =========================================================
@@ -307,18 +307,17 @@ p{ margin:0 0 1em; }
 /* ---- How to Book ---- */
 .howtobook{ background:var(--paper); }
 .htb__tabs{
-  display:flex; gap:0; margin-bottom:3rem;
-  border-bottom:2px solid var(--hair-2);
+  display:flex; gap:.4rem; margin-bottom:3rem;
+  padding:.35rem; background:var(--hair); border-radius:999px; width:fit-content;
 }
 .htb__tab{
-  font-family:var(--m); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase;
-  background:none; border:none; padding:.9rem 2rem;
+  font-family:var(--f); font-size:.72rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+  background:none; border:none; border-radius:999px; padding:.85rem 1.8rem;
   color:var(--ink-3); cursor:pointer;
-  border-bottom:2px solid transparent; margin-bottom:-2px;
-  transition:color .2s, border-color .2s;
+  transition:color .25s, background-color .25s;
 }
 .htb__tab--active{
-  color:var(--ink); border-bottom-color:var(--lime);
+  color:var(--paper); background:var(--lime-dk);
 }
 .htb__tab:hover:not(.htb__tab--active){ color:var(--ink); }
 .htb__panels{ min-height:360px; }
@@ -333,7 +332,7 @@ p{ margin:0 0 1em; }
   display:flex; align-items:flex-start; gap:1.4rem;
 }
 .htb__num{
-  font-family:var(--m); font-size:.65rem; color:var(--lime-dk);
+  font-family:var(--f); font-size:.65rem; color:var(--lime-dk);
   min-width:28px; padding-top:.28rem; flex-shrink:0;
 }
 .htb__steps p{ margin:0; color:var(--ink-2); line-height:1.65; }
