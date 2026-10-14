@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" role="img" aria-label="Fit Room Pilates &amp; Training Studios">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" role="img" aria-label="Fit Room Pilates &amp; Training Studios">
 
   <!-- FIT -->
   <text x="12" y="88" font-family="'Hanken Grotesk', Arial Black, sans-serif" font-size="82" font-weight="800" letter-spacing="-2" fill="#4A4438">FIT</text>
@@ -16,12 +16,12 @@
   <text x="287" y="88" font-family="'Hanken Grotesk', Arial Black, sans-serif" font-size="82" font-weight="800" letter-spacing="-2" fill="#4A4438">OOM</text>
 
   <!-- Dotted underline (lime) -->
-  <line x1="12" y1="100" x2="388" y2="100" stroke="#7C8C5E" stroke-width="3.5" stroke-dasharray="6,5" stroke-linecap="round"/>
+  <line x1="12" y1="100" x2="508" y2="100" stroke="#7C8C5E" stroke-width="3.5" stroke-dasharray="6,5" stroke-linecap="round"/>
 
   <!-- PILATES & TRAINING STUDIOS -->
-  <text x="200" y="128" font-family="'Space Mono', monospace" font-size="13" letter-spacing="3" fill="#4A4438" text-anchor="middle" font-weight="400">PILATES &amp; TRAINING STUDIOS</text>
+  <text x="260" y="128" font-family="'Space Mono', monospace" font-size="13" letter-spacing="3" fill="#4A4438" text-anchor="middle" font-weight="400">PILATES &amp; TRAINING STUDIOS</text>
 
   <!-- Santa Teresa -->
-  <text x="200" y="150" font-family="'Hanken Grotesk', Arial, sans-serif" font-size="13" letter-spacing="1" fill="#7C8C5E" text-anchor="middle" font-weight="400">Santa Teresa</text>
+  <text x="260" y="150" font-family="'Hanken Grotesk', Arial, sans-serif" font-size="13" letter-spacing="1" fill="#7C8C5E" text-anchor="middle" font-weight="400">Santa Teresa</text>
 
 </svg>
