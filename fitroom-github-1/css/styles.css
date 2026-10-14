@@ -49,7 +49,7 @@ p{ margin:0 0 1em; }
 .hidden{ display:none !important; }
 
 .container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--pad); }
-.section{ padding-block:clamp(80px,12vw,170px); position:relative; }
+.section{ padding-block:clamp(56px,8vw,110px); position:relative; }
 
 /* ---- mono micro-type ---- */
 .mono{ font-family:var(--f); font-weight:400; font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; }
