@@ -132,7 +132,7 @@ p{ margin:0 0 1em; }
    ========================================================= */
 .hero{ padding-top:clamp(100px,13vw,160px); padding-bottom:clamp(40px,6vw,72px); }
 .hero__brand{ text-align:center; margin-bottom:clamp(28px,4vw,48px); }
-.hero__logo{ width:min(82vw,380px); height:auto; display:block; margin:0 auto; mix-blend-mode:multiply; }
+.hero__logo{ width:min(82vw,380px); height:auto; display:block; margin:0 auto; }
 .hero__tagline{ font-size:.72rem; letter-spacing:.28em; text-transform:uppercase; color:var(--lime-dk); margin-top:.7em; opacity:.85; }
 .hero__actions--center{ text-align:center; margin-top:clamp(24px,3.5vw,40px); }
 .about__headline{ font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--lime-dk); margin-bottom:1.2em; opacity:.8; }
