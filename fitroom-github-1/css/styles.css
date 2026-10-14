@@ -324,7 +324,7 @@ p{ margin:0 0 1em; }
   color:var(--paper); background:var(--lime-dk);
 }
 .htb__tab:hover:not(.htb__tab--active){ color:var(--ink); }
-.htb__panels{ min-height:360px; }
+.htb__panels{ min-height:0; }
 .htb__panel{ display:none; }
 .htb__panel--active{ display:block; }
 .htb__steps{
